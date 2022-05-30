@@ -14,6 +14,15 @@ import ca2 from "./images/slider/ca2.jpg";
 import ca3 from "./images/slider/ca3.jpg";
 import ca4 from "./images/slider/ca4.jpg";
 import ca5 from "./images/slider/ca5.jpg";
+import kw1 from "./images/slider/kw1.jpg";
+import kw2 from "./images/slider/kw2.jpg";
+import kw3 from "./images/slider/kw3.jpg";
+import kw4 from "./images/slider/kw4.jpg";
+import kw5 from "./images/slider/kw5.jpg";
+import etm1 from "./images/slider/etm1.jpg";
+import etm2 from "./images/slider/etm2.jpg";
+import etm3 from "./images/slider/etm3.jpg";
+import ac1 from "./images/slider/ac1.jpg";
 
 export const projectinfo = [
   {
@@ -38,7 +47,7 @@ export const projectinfo = [
   },
   {
     src: kw,
-    slider: [etg11, etg12, etg13, etg14, etg15, etg16],
+    slider: [kw1, kw2, kw3, kw4, kw5],
     link: "https://kellerwilliams.netlify.app",
     gh: "https://github.com/brunokalthoff/kellerwilliams",
     h: "Keller Williams",
@@ -48,7 +57,7 @@ export const projectinfo = [
   },
   {
     src: dinos,
-    slider: [etg11, etg12, etg13, etg14, etg15, etg16],
+    slider: [etm1, etm2, etm3],
     link: "link",
     gh: "link",
     h: "ETG#2: Remember the Mesozoics?",
@@ -58,12 +67,12 @@ export const projectinfo = [
   },
   {
     src: blockchain,
-    slider: [etg11, etg12, etg13, etg14, etg15, etg16],
+    slider: [ac1],
     link: "link",
     gh: "link",
     h: "ArtChain",
     pShort: "Blockchain generating algorithmic Artworks",
-    pLong: "This Simulation makes it easy understand how a cryptocurrency runs on a decentralized blockchain. It visualy explains pending transactions, mining, node validation, hashing, public and private keys. It is written in JavaScript using React for the frontend, and Express for the backend. You can add/remove features and discover how proofing mechanisms, block mining, mining rewards, pending transaction etc. actually work.",
+    pLong: "This Simulation makes it easy understand how a cryptocurrency runs on a decentralized blockchain. It visualy explains pending transactions, mining, node validation, hashing, public and private keys. You can add & remove features and discover how proofing mechanisms, block mining, mining rewards, pending transaction etc. actually work.",
     tech: ["Tailwind CSS", "React.js", "Express.js", "Firebase"]
   },
 ];

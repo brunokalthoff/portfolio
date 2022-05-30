@@ -1,22 +1,15 @@
-import { motion, useTransform } from "framer-motion";
-import React, { useState } from "react";
-import { GiClaymoreExplosive } from "react-icons/gi";
+import { motion } from "framer-motion";
+import React from "react";
 import avatar from "./images/avatar.jpg";
-import { crumbs, garden } from "./GardenSVG";
+import Headline from "./Headline";
 
 export default function Bio({ scrollYProgress }) {
-  const [readMore, setReadMore] = useState(false);
-  const y = useTransform(scrollYProgress, [0, 0.4], ["0%", "100%"]);
-  const rotate = useTransform(scrollYProgress, [0, 0.3], [0, -90]);
+  const [readMore, setReadMore] = React.useState(false);
+  // const y = useTransform(scrollYProgress, [0, 0.4], ["0%", "100%"]);
+  // const rotate = useTransform(scrollYProgress, [0, 0.3], [0, -90]);
 
   return (
     <motion.div className="bio">
-      {/* <div className="garden-svg">
-      {garden}
-      </div> */}
-      <div className="headline">
-        <motion.h2 style={{ y, rotate }}>Bio</motion.h2>
-      </div>
 
       <motion.img
         initial={{ opacity: 0 }}
@@ -43,35 +36,35 @@ export default function Bio({ scrollYProgress }) {
             className="more"
             onClick={() => setReadMore((prev) => !prev)}
           >
-            ... <u>more</u>
+            ... <br /> <u>more</u>
           </motion.span>
         )}
         {readMore && (
           <>
             <motion.span>
               {" "}
-              His programming journey began with designing and coding a
-              virtual art exhibition featuring 19 international artists in
-              February 2021, and a fascination about the possibilities of the
-              world of programming. Besides further exploring art in the digital
-              realms, Bruno is especially interested in creating efficient
-              CRM-Systems for enterprises - unleashing the full potential of
-              modern web app programming technologies that make handling
-              dynamic, fast-changing content possible. <br />
+              His programming journey began with designing and coding a virtual
+              art exhibition featuring 19 international artists in February
+              2021, and a fascination about the possibilities of the world of
+              programming. Besides further exploring art in the digital realms,
+              Bruno is especially interested in creating efficient CRM-Systems
+              for enterprises - unleashing the full potential of modern web app
+              programming technologies that make handling dynamic, fast-changing
+              content possible. <br />
               <br />
-              Bruno studied analytical Philosophy & Economics at Humboldt University in
-              Berlin, and has worked in Journalism and Insurance. His interests
-              are in the fields of Technology, Neuroscience, Philosophy,
-              Psychology, Art, Literature. Describing his stage, he is "fully
-              engaged in the journey and excited for the future". Currently
-              living in Bali.
+              Bruno studied analytical Philosophy & Economics at Humboldt
+              University in Berlin, and has worked in Journalism and Insurance.
+              His interests are in the fields of Technology, Neuroscience,
+              Philosophy, Psychology, Art, Literature. Describing his stage, he
+              is "fully engaged in the journey and excited for the future".
+              Currently living in Bali.
             </motion.span>
             <br />
             <motion.span
               className="more"
               onClick={() => setReadMore((prev) => !prev)}
             >
-              <u>less</u>
+             <br /> <u>less</u>
             </motion.span>
           </>
         )}

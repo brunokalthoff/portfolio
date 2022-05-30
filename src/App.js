@@ -1,16 +1,19 @@
 import Bg from './Bg'
 import Bio from "./Bio";
 import Projects from "./Projects";
-import { motion, useElementScroll } from "framer-motion";
+import { motion } from "framer-motion";
 import Technology from "./Technology";
-import Nav from "./Nav";
-import React, { useState, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import Contact from './Contact';
+import Headline from './Headline';
 
 function App() {
-    const [nav, setNav] = useState("bio");
-    const ref = useRef()
-    const { scrollYProgress } = useElementScroll(ref)
+    const [nav, setNav] = useState("Bio");
+    const [back, setBack] = useState(null);
+    useEffect(() => {
+        document.querySelector(".glassActive").scrollTop = 0;
+    }, [back, nav]);
+
     return (
         <div className="app">
             <motion.section layout animate={{
@@ -19,13 +22,14 @@ function App() {
                 rotate: [0, 720],
                 borderRadius: ["100%", "80%", "70%", "60%", "2rem"]
             }} className="glass">
-                <div ref={ref} className="glassActive">
-                    {nav === "bio" && <Bio scrollYProgress={scrollYProgress} />}
-                    {nav === "projects" && <Projects scrollYProgress={scrollYProgress} />}
-                    {nav === "technology" && <Technology scrollYProgress={scrollYProgress} />}
-                    {nav === "contact" && <Contact scrollYProgress={scrollYProgress} />}
+                <div className="glassActive">
+                    <Headline nav={nav} setNav={setNav} />
+                    {nav === "Bio" && <Bio />}
+                    {nav === "Projects" && <Projects back={back} setBack={setBack} />}
+                    {nav === "Technology" && <Technology />}
+                    {nav === "Contact" && <Contact />}
                 </div>
-                <Nav setNav={setNav} nav={nav} />
+
             </motion.section>
             <Bg />
         </div>
