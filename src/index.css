@@ -173,9 +173,12 @@ nav svg {
 
 nav div span {
   color: var(--grey);
-  font-size: 0.8rem;
+  font-size: 1.2rem;
+  letter-spacing: .3rem;
   transition: all 0.4;
   margin-left: 0.4rem;
+  font-family: 'VT323', monospace;
+
 }
 .nav-tab-inactive:hover,
 .nav-tab-inactive:hover span,
@@ -600,20 +603,7 @@ padding: 0 0 2rem;
 }
 
 @media only screen and (max-width: 600px) {
-  nav div span {
-    font-size: 0.6rem;
-    display: none;
-  }
 
-  .headline {
-    justify-content: space-between;
-    padding: 0 1rem;
-    margin-bottom: 1rem;
-  }
-
-  .headline h2 {
-    display: block;
-  }
   .inner-carousel {
     padding: 0 calc(50% - 5rem);
   }
