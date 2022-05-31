@@ -14,7 +14,7 @@ function Contact({ scrollYProgress }) {
   return (
     <div ref={constraintsRef} className="contact">
   
-        <ContactForm />
+       
         <motion.div
           className="contact-card">
           <p>
@@ -24,7 +24,7 @@ function Contact({ scrollYProgress }) {
           </p>
           <br />
         </motion.div>
-        
+         <ContactForm />
         
         <div className="contact-card contact-social-icons">
           <AiFillGithub onClick={() => openInNewTab("https://github.com/brunokalthoff")} />

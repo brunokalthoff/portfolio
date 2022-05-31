@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { frontendSvg3, backendSvg2, skillsSvg } from "./svgs";
 
 export default function Technology() {
   const tech = {
@@ -12,7 +13,7 @@ export default function Technology() {
       "JavaScript",
       "React.js",
       "React Router",
-      "REDUX"
+      "REDUX",
     ],
     backend: ["Node.js", "Express.js", "MongoDB", "Firebase"],
     skills: [
@@ -21,51 +22,68 @@ export default function Technology() {
       "Cryptography",
       "Hashing",
       "OAuth2",
-      "Test Driven Development",
     ],
   };
 
   return (
     <div className="technology">
-      <h3>Frontend</h3>
-      {tech.frontend.map((frontend, i) => {
-        return (
-          <motion.p
-            whileHover={{ scale: 1.1 }}
-            initial={{ opacity: 0, x: -3 }}
-            animate={{ opacity: 1, x: 5, transition: { delay: i * 0.05 } }}
-            key={i}
-          >
-            {frontend}
-          </motion.p>
-        );
-      })}
-      <h3>Backend</h3>
-      {tech.backend.map((backend, i) => {
-        return (
-          <motion.p
-            whileHover={{ scale: 1.1 }}
-            initial={{ opacity: 0, x: -3 }}
-            animate={{ opacity: 1, x: 5, transition: { delay: i * 0.05 } }}
-            key={i}
-          >
-            {backend}
-          </motion.p>
-        );
-      })}
-      <h3>Skills</h3>
-      {tech.skills.map((skill, i) => {
-        return (
-          <motion.p
-            whileHover={{ scale: 1.1 }}
-            initial={{ opacity: 0, x: -3 }}
-            animate={{ opacity: 1, x: 5, transition: { delay: i * 0.05 } }}
-            key={i}
-          >
-            {skill}
-          </motion.p>
-        );
-      })}
+      <div className="frontend">
+        <div>
+          <h3>Frontend</h3>
+          {tech.frontend.map((frontend, i) => {
+            return (
+              <motion.p
+                whileHover={{ scale: 1.1 }}
+                initial={{ opacity: 0, x: -3 }}
+                animate={{ opacity: 1, x: 5, transition: { delay: i * 0.05 } }}
+                key={i}
+              >
+                {frontend}
+              </motion.p>
+            );
+          })}
+        </div>
+
+        {frontendSvg3}
+      </div>
+
+      <div className="backend">
+        {backendSvg2}
+        <div>
+          <h3>Backend</h3>
+          {tech.backend.map((backend, i) => {
+            return (
+              <motion.p
+                whileHover={{ scale: 1.1 }}
+                initial={{ opacity: 0, x: -3 }}
+                animate={{ opacity: 1, x: 5, transition: { delay: i * 0.05 } }}
+                key={i}
+              >
+                {backend}
+              </motion.p>
+            );
+          })}
+        </div>
+      </div>
+      <div className="skills">
+        <div>
+          <h3>Skills</h3>
+          {tech.skills.map((skill, i) => {
+            return (
+              <motion.p
+                whileHover={{ scale: 1.1 }}
+                initial={{ opacity: 0, x: -3 }}
+                animate={{ opacity: 1, x: 5, transition: { delay: i * 0.05 } }}
+                key={i}
+              >
+                {skill}
+              </motion.p>
+            );
+          })}
+        </div>
+        {skillsSvg}
+      </div>
     </div>
   );
 }
+

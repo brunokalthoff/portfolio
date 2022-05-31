@@ -61,7 +61,7 @@ export const projectinfo = [
     link: "link",
     gh: "link",
     h: "ETG#2: Remember the Mesozoics?",
-    pShort: "Virtual Art Exhibition",
+    pShort: "Virtual art exhibition",
     pLong: "Second exhibition of the ETG series. Going online in July 2022",
     tech: ["Tailwind CSS", "Framer Motion", "React.js", "Express.js", "MongoDB", "User Authorization & Autentification", "Encryption & Hashing"]
   },

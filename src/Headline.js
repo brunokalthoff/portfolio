@@ -8,7 +8,7 @@ import { AiFillCloseCircle } from "react-icons/ai";
 import { IoIosRadioButtonOn } from "react-icons/io";
 
 
-function Headline({ nav, setNav, startDrag }) {
+function Headline({ nav, setNav, setGlass }) {
     return (
 
         <motion.div className="headline">
@@ -17,7 +17,7 @@ function Headline({ nav, setNav, startDrag }) {
                     <IoIosRadioButtonOn /><IoIosRadioButtonOn /><IoIosRadioButtonOn />
                 </div>
                 <div className="crunchrocket">crunch<IoRocketOutline />rocket.</div>
-                <AiFillCloseCircle onPointerDown={startDrag} className="headline-button-right" />
+                <AiFillCloseCircle onClick={()=>setGlass(false)} className="headline-button-right" />
 
             </div>
             <nav>

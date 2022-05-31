@@ -13,7 +13,7 @@
 
   --grey: grey;
   --black: #1d1d1d;
-  --yellow: rgba(197, 131, 45, 0.77);
+  --yellow: #c5832dc4;
 }
 
 * {
@@ -89,11 +89,49 @@ svg {
   left: 0;
   height: 200%;
   width: 100%;
-  color: rgb(30, 30, 30);
+  color: rgb(73, 15, 86);
   font-weight: 100;
   word-break: break-all;
   font-size: 3rem;
   pointer-events: none;
+  opacity: 0.3;
+}
+
+#cloud1 {
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
+  z-index: 1;
+  opacity: 0.6;
+  transform: scale(0.8);
+}
+
+
+#cloud2 {
+  position: absolute;
+  margin: 2rem;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  opacity: 0.6;
+}
+
+#cloud3 svg {
+  position: absolute;
+  bottom: 20%;
+  left: 0;
+  z-index: 1;
+  transform: scale(0.8);
+  opacity: 0.6;
+}
+
+#cloud4 svg {
+  position: absolute;
+  bottom: 25%;
+  right: 4rem;
+  z-index: 1;
+
+  opacity: 0.6;
 }
 
 .glass {
@@ -162,7 +200,7 @@ nav svg {
 
 .nav-tab-active {
   /* border: 1px solid rgba(195, 217, 224, 0.342); */
-  border-bottom: 1px solid var(--lightBlue);
+  border-bottom: 1px solid var(--yellow);
   color: var(--white);
   background-color: rgb(29, 36, 42);
 }
@@ -244,12 +282,12 @@ nav div span {
   /* background: #1b1b1b; */
   border-radius: 1rem;
   color: white;
-  margin: 0.5rem;
+
   padding: 1rem 4rem 1rem 2rem;
   /* box-shadow: 6px 6px 20px rgba(100, 89, 89, 0.418); */
   /* border: 1px solid rgba(255, 255, 255, 0.437); */
   /* border: 1px solid var(--borderBlue); */
-  width: clamp(300px, 50%, 400px)
+  width: clamp(300px, 50%, 400px);
 }
 
 .contact-card h4 {
@@ -277,17 +315,17 @@ nav div span {
   align-items: center;
   gap: 1rem;
   width: fit-content;
+  margin-top: 1rem;
 }
 
 .contact-social-icons svg {
   cursor: pointer;
 }
 
-
 .contact-form {
   display: flex;
   flex-direction: column;
-  padding: 2rem;
+  padding: 0 2rem 2rem;
   z-index: 2;
 }
 
@@ -300,7 +338,7 @@ nav div span {
   height: 2rem;
 }
 
-.contact-form input,
+.contact-form input[type="text"],
 textarea {
   font-family: "Roboto Mono", sans-serif;
   background-color: transparent;
@@ -334,7 +372,7 @@ textarea {
   bottom: auto;
 }
 
-.contact-form input:focus,
+.contact-form input[type="text"]:focus,
 textarea:focus {
   outline: none;
   border-bottom: 1px solid var(--yellow);
@@ -342,14 +380,23 @@ textarea:focus {
 
 .contact-form input[type="submit"] {
   color: var(--white);
-  background: rgb(0, 89, 178);
-  background: var(--lightBlue);
   border-radius: 0.2rem;
   margin: 1rem 0;
   padding: 1rem;
   width: 50%;
+  cursor: pointer;
+  font-family: "Roboto Mono", sans-serif;
+  border: none;
+  transition: all 0.3s;
 }
 
+.contact-form input[type="submit"]:hover {
+  filter: brightness(0.9);
+}
+
+.contact-form input[type="submit"]:active {
+  transform: scale(1.05);
+}
 .projects {
   width: 100%;
   min-height: 100%;
@@ -385,6 +432,7 @@ textarea:focus {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  pointer-events: none;
 }
 
 .headline-buttons-left svg {
@@ -405,6 +453,7 @@ textarea:focus {
 
 .headline-button-right {
   color: #786970;
+  cursor: pointer;
 }
 
 .headline svg {
@@ -416,6 +465,29 @@ textarea:focus {
   color: #85b1d4;
   color: var(--yellow);
   font-size: 2rem;
+}
+
+.minibrowser {
+  position: relative;
+  width: 8rem;
+  height: 8rem;
+  border: solid rgba(245, 222, 179, 0.352);
+  border-radius: 1rem;
+  padding: 0 0.8rem;
+  z-index: 3;
+  cursor: grab;
+  background: linear-gradient(to top, #111d25, rgb(15, 20, 24));
+}
+
+.minibrowser span {
+  font-size: 3rem;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
 }
 
 .projects-view-toggle {
@@ -603,20 +675,55 @@ textarea:focus {
   align-items: center;
   justify-content: flex-start;
   text-align: center;
-  padding: 4rem 0;
+  padding: 1rem 0 3rem;
 }
 
-.technology h3 {
+.technology p {
+  cursor: default;
+}
+
+.technology div {
+  margin: 0 0 5rem;
+}
+
+.frontend h3,
+.backend h3,
+.skills h3 {
   padding: 2rem 0;
 }
 
-.technology h3:first-child {
-  padding: 0 0 2rem;
+.frontend,
+.backend,
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 7rem;
+}
+
+.technology svg {
+  width: 30%;
+  height: 250px;
+  min-width: 10rem;
 }
 
 @media only screen and (max-width: 600px) {
   .inner-carousel {
     padding: 0 calc(50% - 5rem);
+  }
+  .glass {
+    width: 100%;
+    height: 100vh;
+    border-radius: 0;
+  }
+
+  .contact-card {
+    width: auto;
+  }
+  .contact-form {
+    width: 100%;
   }
 }
 
