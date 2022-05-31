@@ -173,12 +173,9 @@ nav svg {
 
 nav div span {
   color: var(--grey);
-  font-size: 1.2rem;
-  letter-spacing: .3rem;
+  font-size: .8rem;
   transition: all 0.4;
   margin-left: 0.4rem;
-  font-family: 'VT323', monospace;
-
 }
 .nav-tab-inactive:hover,
 .nav-tab-inactive:hover span,
@@ -478,7 +475,7 @@ textarea:focus {
   position: relative;
   border-radius: 1rem;
   width: 12rem;
-  pointer-events: none;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: stretch;
