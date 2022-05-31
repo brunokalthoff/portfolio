@@ -17,11 +17,10 @@ function App() {
     return (
         <div className="app">
             <motion.section layout animate={{
-                scale: [0, 0.1, 0.2, 0.3, 0.3, 1],
-                scaleX: [0.7, 0.7, 0.8, 0.86, 1],
+                scale: [0, 0, 0, 1],
                 rotate: [0, 720],
-                borderRadius: ["100%", "80%", "70%", "60%", "2rem"]
-            }} className="glass">
+                borderRadius: ["100%", "2rem"]
+            }} transition={{ duration: 1, type: "spring" }} className="glass">
                 <div className="glassActive">
                     <Headline nav={nav} setNav={setNav} />
                     {nav === "Bio" && <Bio />}
@@ -29,7 +28,6 @@ function App() {
                     {nav === "Technology" && <Technology />}
                     {nav === "Contact" && <Contact />}
                 </div>
-
             </motion.section>
             <Bg />
         </div>

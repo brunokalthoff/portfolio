@@ -8,8 +8,6 @@ import { AiFillCloseCircle } from "react-icons/ai";
 import { IoIosRadioButtonOn } from "react-icons/io";
 
 
-
-
 function Headline({ nav, setNav, startDrag }) {
     return (
 

@@ -14,7 +14,6 @@
   --grey: grey;
   --black: #1d1d1d;
   --yellow: rgba(197, 131, 45, 0.77);
-  --yellow: var(--lightBlue);
 }
 
 * {
@@ -94,6 +93,7 @@ svg {
   font-weight: 100;
   word-break: break-all;
   font-size: 3rem;
+  pointer-events: none;
 }
 
 .glass {
@@ -162,7 +162,7 @@ nav svg {
 
 .nav-tab-active {
   /* border: 1px solid rgba(195, 217, 224, 0.342); */
-  border-bottom: 1px solid var(--yellow);
+  border-bottom: 1px solid var(--lightBlue);
   color: var(--white);
   background-color: rgb(29, 36, 42);
 }
@@ -173,7 +173,7 @@ nav svg {
 
 nav div span {
   color: var(--grey);
-  font-size: .8rem;
+  font-size: 0.8rem;
   transition: all 0.4;
   margin-left: 0.4rem;
 }
@@ -231,21 +231,25 @@ nav div span {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding: 4rem 0;
+  padding: 2.5rem 0 0;
+}
+
+.contact svg {
+  color: var(--yellow);
+  font-size: 1.5rem;
+  opacity: 1;
 }
 
 .contact-card {
-  background: linear-gradient(to top, #1d1e1f94, #0f1b20c0);
-  background: var(--darkBlue);
-  background: var(--middleBlue);
-  background: #1b1b1b;
+  /* background: #1b1b1b; */
   border-radius: 1rem;
   color: white;
   margin: 0.5rem;
   padding: 1rem 4rem 1rem 2rem;
-  box-shadow: 6px 6px 20px rgba(100, 89, 89, 0.418);
-  border: 1px solid rgba(255, 255, 255, 0.437);
-  border: 1px solid var(--borderBlue);
+  /* box-shadow: 6px 6px 20px rgba(100, 89, 89, 0.418); */
+  /* border: 1px solid rgba(255, 255, 255, 0.437); */
+  /* border: 1px solid var(--borderBlue); */
+  width: clamp(300px, 50%, 400px)
 }
 
 .contact-card h4 {
@@ -266,6 +270,19 @@ nav div span {
   font-size: 1.2rem;
   opacity: 1;
 }
+
+.contact-social-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  width: fit-content;
+}
+
+.contact-social-icons svg {
+  cursor: pointer;
+}
+
 
 .contact-form {
   display: flex;
@@ -350,10 +367,8 @@ textarea:focus {
   top: 0;
   background-color: rgb(15, 20, 24);
   z-index: 10;
-  color: rgba(255, 255, 255, 0.442);
-  color: rgba(240, 128, 128, 0.562);
   color: lightpink;
-  font-size: .6rem;
+  font-size: 0.6rem;
 }
 
 .headline-line {
@@ -373,7 +388,7 @@ textarea:focus {
 }
 
 .headline-buttons-left svg {
-  margin-right: .2rem;
+  margin-right: 0.2rem;
 }
 
 .headline-buttons-left svg:nth-child(1) {
@@ -596,11 +611,10 @@ textarea:focus {
 }
 
 .technology h3:first-child {
-padding: 0 0 2rem;
+  padding: 0 0 2rem;
 }
 
 @media only screen and (max-width: 600px) {
-
   .inner-carousel {
     padding: 0 calc(50% - 5rem);
   }

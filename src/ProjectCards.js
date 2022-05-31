@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { IoInformationCircleSharp } from "react-icons/io5";
 import { projectinfo } from "./projectinfo";
 
 function ProjectCards({ setBack }) {
