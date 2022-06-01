@@ -11,13 +11,12 @@ function Bg() {
 
     return (
         <>
+        <div className="ball1"></div>
         <motion.div id="cloud1" initial={{x:0}} animate={{x:20}} transition={{duration: 20, repeat: Infinity, repeatType:"mirror", ease:"linear"}}>{cloud1}</motion.div>
         <motion.div id="cloud3">{cloud1}</motion.div>
        <div id="cloud2">{cloud2}</div>
-       <div id="cloud4">{cloud2}</div> 
-
-
-
+       <div id="cloud4">{cloud1}</div> 
+       <div id="cloud5">{cloud1}</div> 
 
             <motion.div animate={{y:"-1000%"}} transition={{ repeat: Infinity, repeatType: "loop", duration: 240, ease: "linear", repeatDelay: 0 }} className="circle">
 

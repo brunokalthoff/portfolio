@@ -2,6 +2,8 @@
   font-size: 16px;
   line-height: 1.8;
   --lightBlue: #3ca4ff;
+
+  /* --lightBlue: #aa96fb; */
   --middleBlue: rgb(19, 47, 76);
   --middleDarkerBlue: rgb(0, 30, 60);
   --darkBlue: rgb(10, 25, 41);
@@ -16,6 +18,14 @@
   --yellow: #c5832dc4;
 
   --successGreen: #1b9264;
+  --failureRed: #b4557e;
+
+  --palletePurple: #221126;
+  --palleteBlack: #16091f;
+  --palleteYellow: var(--yellow);
+  --palleteBlue: #2f67a7;
+  --palletePink: #ffa9ff;
+
 }
 
 * {
@@ -52,6 +62,7 @@ h1 {
 h2 {
   color: var(--white);
   font-weight: 900;
+
 }
 
 h3,
@@ -78,7 +89,13 @@ svg {
   background: #1a1a1a;
   background: #0e1820;
   background: linear-gradient(#4891ca, #85b1d4);
-  background: linear-gradient(var(--darkestBlue), #240922);
+  background: linear-gradient(var(--darkBlue), lightblue);
+  background: linear-gradient(to top right, #271428, #080018);
+  background: var(--palleteBlue);
+  
+  /* background: #4931ab;
+  background: linear-gradient(to top, #240922, var(--lightBlue));
+  background: linear-gradient(to top, #78b3ee, #d6cde9); */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -96,7 +113,22 @@ svg {
   word-break: break-all;
   font-size: 3rem;
   pointer-events: none;
-  opacity: 0.3;
+  opacity: 0.0;
+}
+
+.ball1 {
+  position: absolute;
+  top: 4rem;
+  left: 5rem;
+  width: 20rem;
+  height: 20rem;
+  background-color: var(--yellow);
+  border-radius: 50%;
+  backdrop-filter: blur(1px);
+}
+
+.app > div svg path {
+  color: #aa71d6;
 }
 
 #cloud1 {
@@ -107,7 +139,6 @@ svg {
   opacity: 0.6;
   transform: scale(0.8);
 }
-
 
 #cloud2 {
   position: absolute;
@@ -129,11 +160,20 @@ svg {
 
 #cloud4 svg {
   position: absolute;
-  bottom: 25%;
-  right: 4rem;
+  bottom: 20%;
+  right: 10rem;
   z-index: 1;
-
   opacity: 0.6;
+}
+
+#cloud5 svg {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  opacity: 0.6;
+  /* transform: scale(-1); */
 }
 
 .glass {
@@ -158,9 +198,10 @@ svg {
   overflow: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  background: var(--darkBlue);
   /* background: var(--darkestBlue); */
   background: linear-gradient(to top, #111d25, rgb(15, 20, 24));
+  /* background: linear-gradient(var(--darkBlue), #240922); */
+  background: rgb(29, 36, 42);
 }
 
 .glassActive::-webkit-scrollbar {
@@ -201,7 +242,6 @@ nav svg {
 }
 
 .nav-tab-active {
-  /* border: 1px solid rgba(195, 217, 224, 0.342); */
   border-bottom: 1px solid var(--yellow);
   color: var(--white);
   background-color: rgb(29, 36, 42);
@@ -255,7 +295,7 @@ nav div span {
   font-size: 0.9rem;
   line-height: 1.8rem;
   opacity: 1;
-  font-weight: 100;
+  font-weight: 200;
 }
 
 .more {
@@ -275,20 +315,14 @@ nav div span {
 }
 
 .contact svg {
-  color: var(--yellow);
   font-size: 1.5rem;
   opacity: 1;
 }
 
 .contact-card {
-  /* background: #1b1b1b; */
   border-radius: 1rem;
   color: white;
-
   padding: 1rem 4rem 1rem 2rem;
-  /* box-shadow: 6px 6px 20px rgba(100, 89, 89, 0.418); */
-  /* border: 1px solid rgba(255, 255, 255, 0.437); */
-  /* border: 1px solid var(--borderBlue); */
   width: clamp(300px, 50%, 400px);
 }
 
@@ -321,6 +355,7 @@ nav div span {
 }
 
 .contact-social-icons svg {
+  color: var(--palleteYellow);
   cursor: pointer;
 }
 
@@ -442,19 +477,19 @@ textarea:focus {
 }
 
 .headline-buttons-left svg:nth-child(1) {
-  color: #b4557e;
+  color: var(--palletePink);
 }
 
 .headline-buttons-left svg:nth-child(2) {
-  color: green;
+  color: var(--palletePink);
 }
 
 .headline-buttons-left svg:nth-child(3) {
-  color: var(--lightBlue);
+  color: var(--palletePink);
 }
 
 .headline-button-right {
-  color: #786970;
+  color: #697678;
   cursor: pointer;
 }
 
@@ -479,6 +514,7 @@ textarea:focus {
   z-index: 3;
   cursor: grab;
   background: linear-gradient(to top, #111d25, rgb(15, 20, 24));
+  background: var(--activeBlue);
 }
 
 .minibrowser span {
@@ -692,6 +728,7 @@ textarea:focus {
 .backend h3,
 .skills h3 {
   padding: 2rem 0;
+
 }
 
 .frontend,
