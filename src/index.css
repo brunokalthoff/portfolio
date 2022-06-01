@@ -102,6 +102,10 @@ svg {
   overflow: hidden;
 }
 
+.app-mini {
+  background: linear-gradient(to top, #111d25, rgb(15, 20, 24));
+}
+
 .circle {
   position: absolute;
   top: -200px;
@@ -113,7 +117,11 @@ svg {
   word-break: break-all;
   font-size: 3rem;
   pointer-events: none;
-  opacity: 0.0;
+  opacity: 0;
+}
+
+.circle-mini {
+  opacity: 0.2;
 }
 
 .ball1 {
@@ -340,7 +348,7 @@ nav div span {
   vertical-align: middle;
   margin: 0.2rem 0;
   margin-right: 0.6rem;
-  color: var(--lightBlue);
+  color: lightpink;
   font-size: 1.2rem;
   opacity: 1;
 }
@@ -451,7 +459,7 @@ textarea:focus {
   top: 0;
   background-color: rgb(15, 20, 24);
   z-index: 10;
-  color: lightpink;
+  color: var(--white);
   font-size: 0.6rem;
 }
 
@@ -513,8 +521,7 @@ textarea:focus {
   padding: 0 0.8rem;
   z-index: 3;
   cursor: grab;
-  background: linear-gradient(to top, #111d25, rgb(15, 20, 24));
-  background: var(--activeBlue);
+  background: var(--palleteBlue);
 }
 
 .minibrowser span {

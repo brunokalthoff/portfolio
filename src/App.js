@@ -18,7 +18,7 @@ function App() {
     }, [back, nav]);
 
     return (
-        <div ref={constraintsRef } className="app">
+        <div ref={constraintsRef } className={glass ? "app" : "app app-mini"}>
             {!glass && <MiniBrowser constraintsRef ={constraintsRef } setGlass={setGlass} />}
 
             {glass && <motion.section layout animate={{
@@ -33,7 +33,7 @@ function App() {
                     {nav === "Contact" && <Contact />}
                 </div>
             </motion.section>}
-            <Bg />
+            <Bg glass={glass} />
         </div>
     );
 }
