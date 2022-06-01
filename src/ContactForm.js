@@ -28,7 +28,7 @@ function ContactForm() {
     return (
 
         <motion.form
-            className="contact-form contact-card" name="contact" method="POST" data-netlify="true">
+            className="contact-form contact-card" name="contact" netlify>
             <h4>Message Me</h4>
             <motion.label layout htmlFor="name"><input value={name} onChange={e => setName(e.target.value)} onFocus={() => setFocus("name")} onBlur={() => setFocus(null)} name="name" type="text" /> <motion.span layout="position" className={focus === "name" || name !== "" ? "contact-form-span-active" : ""} style={focus !== 'name' ? { color: 'var(--white)' } : {}}>Name</motion.span> </motion.label>
             <motion.label layout htmlFor="email"><input value={email} onChange={e => setEmail(e.target.value)} onFocus={() => setFocus("email")} onBlur={() => setFocus(null)} name="email" type="text" /><motion.span layout="position" className={focus === "email" || email !== "" ? "contact-form-span-active" : ""} style={focus !== 'email' ? { color: 'var(--white)' } : {}}>Email</motion.span></motion.label>
