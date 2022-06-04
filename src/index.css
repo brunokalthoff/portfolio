@@ -25,7 +25,8 @@
   --palleteYellow: var(--yellow);
   --palleteBlue: #2f67a7;
   --palletePink: #ffa9ff;
-
+  --palletePink: #aa71d6;
+  
 }
 
 * {
@@ -62,7 +63,6 @@ h1 {
 h2 {
   color: var(--white);
   font-weight: 900;
-
 }
 
 h3,
@@ -92,7 +92,7 @@ svg {
   background: linear-gradient(var(--darkBlue), lightblue);
   background: linear-gradient(to top right, #271428, #080018);
   background: var(--palleteBlue);
-  
+  background: var(--darkestBlue);
   /* background: #4931ab;
   background: linear-gradient(to top, #240922, var(--lightBlue));
   background: linear-gradient(to top, #78b3ee, #d6cde9); */
@@ -112,15 +112,11 @@ svg {
   left: 0;
   height: 200%;
   width: 100%;
-  color: rgb(73, 15, 86);
+  color: rgb(178, 153, 184);
   font-weight: 100;
   word-break: break-all;
   font-size: 3rem;
   pointer-events: none;
-  opacity: 0;
-}
-
-.circle-mini {
   opacity: 0.2;
 }
 
@@ -131,8 +127,10 @@ svg {
   width: 20rem;
   height: 20rem;
   background-color: var(--yellow);
+  opacity: 1;
   border-radius: 50%;
   backdrop-filter: blur(1px);
+  z-index: 2;
 }
 
 .app > div svg path {
@@ -181,7 +179,14 @@ svg {
   transform: translate(-50%, -50%);
   z-index: 1;
   opacity: 0.6;
-  /* transform: scale(-1); */
+}
+
+.eyes {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: 5rem;
+  pointer-events: none;
 }
 
 .glass {
@@ -218,7 +223,7 @@ svg {
 
 nav {
   height: 2.5rem;
-  min-height: 2.5rem;
+  min-height: 3rem;
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -348,7 +353,7 @@ nav div span {
   vertical-align: middle;
   margin: 0.2rem 0;
   margin-right: 0.6rem;
-  color: lightpink;
+  color: var(--palletePink);
   font-size: 1.2rem;
   opacity: 1;
 }
@@ -484,15 +489,7 @@ textarea:focus {
   margin-right: 0.2rem;
 }
 
-.headline-buttons-left svg:nth-child(1) {
-  color: var(--palletePink);
-}
-
-.headline-buttons-left svg:nth-child(2) {
-  color: var(--palletePink);
-}
-
-.headline-buttons-left svg:nth-child(3) {
+.headline-buttons-left > svg {
   color: var(--palletePink);
 }
 
@@ -522,17 +519,33 @@ textarea:focus {
   z-index: 3;
   cursor: grab;
   background: var(--palleteBlue);
+  pointer-events: none;
 }
 
-.minibrowser span {
+.minibrowser > .headline-buttons-left {
+  pointer-events: all;
+  cursor: grab;
+  z-index: 1;
+}
+
+.minibrowser > svg {
   font-size: 3rem;
   padding: 0;
   margin: 0;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -40%);
+  pointer-events: all;
   cursor: pointer;
+  z-index: 1;
+  fill: var(--successGreen);
+}
+
+.minibrowser > svg:hover {
+  filter: brightness(0.95);
+  transform: rotate(90);
+  transition: all 0.4;
 }
 
 .projects-view-toggle {
@@ -581,8 +594,8 @@ textarea:focus {
   display: flex;
   align-items: stretch;
   justify-content: space-between;
-  gap: 10rem;
-  padding: 0 8.2rem;
+  /* gap: 10rem; */
+  /* padding: 0 8.2rem; */
 }
 
 .carousel-nav {
@@ -606,32 +619,33 @@ textarea:focus {
 .project {
   position: relative;
   border-radius: 1rem;
-  width: 12rem;
+  width: 80%;
+  height: 12rem;
   cursor: pointer;
   display: flex;
-  flex-direction: column;
-  justify-content: stretch;
+  gap: 2rem;
+  justify-content: space-between;
   align-items: center;
-  text-align: center;
+  text-align: right;
   padding: 0 0 1rem;
-  margin: 0 0 4rem;
+  margin: 0 auto 4rem;
 }
 
 .project img {
   height: 12rem;
-  width: 100%;
+  min-width: 12rem;
   object-fit: cover;
   border-radius: 1rem;
   filter: saturate(-1);
 }
 
 .project h3 {
-  padding: 1.5rem;
+  /* padding: 1.5rem; */
   line-height: 1.5rem;
 }
 
 .project p {
-  padding: 0 1rem 3.5rem;
+  /* padding: 0 1rem 3.5rem; */
 }
 
 .project > div {
@@ -735,7 +749,6 @@ textarea:focus {
 .backend h3,
 .skills h3 {
   padding: 2rem 0;
-
 }
 
 .frontend,
@@ -745,14 +758,24 @@ textarea:focus {
   flex-wrap: wrap;
   width: 100%;
   align-items: center;
-  justify-content: center;
-  gap: 7rem;
+  justify-content: space-evenly;
+  gap: 0rem;
 }
+
+.backend {
+  flex-wrap: wrap-reverse;
+}
+
+/* .frontend > div,
+.backend > div,
+.skills > div {
+  min-width: 300px;
+} */
 
 .technology svg {
   width: 30%;
   height: 250px;
-  min-width: 10rem;
+  min-width: 15rem;
 }
 
 @media only screen and (max-width: 600px) {
@@ -836,4 +859,39 @@ textarea:focus {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+}
+
+.bg2 {
+  position: absolute;
+  max-width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.bg2 div {
+  width: 20%;
+  height: 33%;
+}
+
+.bg2 div svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  fill: white;
+}
+
+.bg-open-button {
+  cursor: pointer;
+}
+
+.bg-open-button svg path {
+  fill: #aa71d6;
+}
+
+.bg-open-button svg:hover path {
+  fill: var(--successGreen);
+  transition: all .5;
 }

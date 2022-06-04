@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { frontendSvg3, backendSvg2, skillsSvg } from "./svgs";
+import { frontendSvg, backendSvg, skillsSvg } from "./svgs";
 
 export default function Technology() {
   const tech = {
@@ -44,11 +44,11 @@ export default function Technology() {
           })}
         </div>
 
-        {frontendSvg3}
+        {frontendSvg}
       </div>
 
       <div className="backend">
-        {backendSvg2}
+        {backendSvg}
         <div>
           <h3>Backend</h3>
           {tech.backend.map((backend, i) => {
@@ -86,4 +86,3 @@ export default function Technology() {
     </div>
   );
 }
-
