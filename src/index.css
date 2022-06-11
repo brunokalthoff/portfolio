@@ -16,17 +16,15 @@
   --grey: grey;
   --black: #1d1d1d;
   --yellow: #c5832dc4;
-
-  --successGreen: #1b9264;
+  --fill: #545265;
+  --successGreen: #4b8f75;
   --failureRed: #b4557e;
 
   --palletePurple: #221126;
   --palleteBlack: #16091f;
   --palleteYellow: var(--yellow);
   --palleteBlue: #2f67a7;
-  --palletePink: #ffa9ff;
-  --palletePink: #aa71d6;
-  
+  --palletePink: #c3b1d1;
 }
 
 * {
@@ -319,7 +317,6 @@ nav div span {
 .contact {
   width: 100%;
   min-height: 100%;
-  /* background: linear-gradient(to top, #1d1e1f94, #0f1b20c0); */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -353,24 +350,11 @@ nav div span {
   vertical-align: middle;
   margin: 0.2rem 0;
   margin-right: 0.6rem;
-  color: var(--palletePink);
+  color: var(--successGreen);
   font-size: 1.2rem;
   opacity: 1;
 }
 
-.contact-social-icons {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-  width: fit-content;
-  margin-top: 1rem;
-}
-
-.contact-social-icons svg {
-  color: var(--palleteYellow);
-  cursor: pointer;
-}
 
 .contact-form {
   display: flex;
@@ -483,23 +467,33 @@ textarea:focus {
   left: 50%;
   transform: translateX(-50%);
   pointer-events: none;
+  color: rgb(212, 212, 212);
 }
 
 .headline-buttons-left svg {
   margin-right: 0.2rem;
 }
 
-.headline-buttons-left > svg {
+.headline-buttons-left svg:nth-child(1) {
   color: var(--palletePink);
-}
-
-.headline-button-right {
-  color: #697678;
   cursor: pointer;
 }
+.headline-buttons-left svg:nth-child(2) {
+  color: var(--lightBlue);
+}
+.headline-buttons-left svg:nth-child(3) {
+  color: var(--successGreen);
+}
+
 
 .headline svg {
-  font-size: 1rem;
+  font-size: 1.2rem;
+}
+
+.social-icons svg {
+  color: lightblue;
+  cursor: pointer;
+  margin: .1rem;
 }
 
 .headline h2 {
@@ -594,8 +588,6 @@ textarea:focus {
   display: flex;
   align-items: stretch;
   justify-content: space-between;
-  /* gap: 10rem; */
-  /* padding: 0 8.2rem; */
 }
 
 .carousel-nav {
@@ -620,42 +612,40 @@ textarea:focus {
   position: relative;
   border-radius: 1rem;
   width: 80%;
-  height: 12rem;
+  height: 10rem;
   cursor: pointer;
   display: flex;
   gap: 2rem;
-  justify-content: space-between;
   align-items: center;
-  text-align: right;
-  padding: 0 0 1rem;
+  text-align: left;
   margin: 0 auto 4rem;
+  border: 1px solid var(--borderBlue);
+  overflow: hidden;
+  padding: 0 2rem 0 0;
 }
 
 .project img {
-  height: 12rem;
-  min-width: 12rem;
+  height: 10rem;
+  min-width: 10rem;
   object-fit: cover;
   border-radius: 1rem;
   filter: saturate(-1);
 }
 
+.project > div {
+  display: flex;
+  align-items: baseline;
+  width: 100%;
+}
+
 .project h3 {
-  /* padding: 1.5rem; */
   line-height: 1.5rem;
+  width: 50%;
+  padding: 0 2rem 0 0;
 }
 
 .project p {
-  /* padding: 0 1rem 3.5rem; */
-}
-
-.project > div {
-  color: lightblue;
-  font-size: 1.5rem;
-  cursor: pointer;
-  pointer-events: all;
-  position: absolute;
-  justify-self: flex-end;
-  bottom: 1rem;
+  width: 50%;
 }
 
 .arrow {
@@ -734,7 +724,7 @@ textarea:focus {
   align-items: center;
   justify-content: flex-start;
   text-align: center;
-  padding: 1rem 0 3rem;
+  padding: 1rem 0 0;
 }
 
 .technology p {
@@ -786,6 +776,22 @@ textarea:focus {
     width: 100%;
     height: 100vh;
     border-radius: 0;
+  }
+
+  .project > div {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .project h3 {
+    line-height: 1.5rem;
+    margin-bottom: .5rem;
+    padding: 0;
+    width: 100%;
+  }
+  
+  .project p {
+    width: 100%;
   }
 
   .contact-card {
@@ -893,5 +899,41 @@ textarea:focus {
 
 .bg-open-button svg:hover path {
   fill: var(--successGreen);
-  transition: all .5;
+  transition: all 0.5;
+}
+
+#inner path {
+  fill: var(--palleteBlue);
+}
+
+#toes path {
+  fill: var(--palletePink);
+}
+
+.loadbar {
+  border: solid white;
+  width: 100%;
+  height: 1.3rem;
+  border-radius: 0.4rem;
+  margin-top: 1.5rem;
+  overflow: hidden;
+}
+
+.loadbar .inner {
+  background: var(--successGreen);
+  width: 100%;
+  height: 100%;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+small {
+  margin: 2rem 0;
+  color: lightblue;
+  font-size: .7rem;
+  opacity: .7;
 }

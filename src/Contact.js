@@ -5,6 +5,7 @@ import { FaInstagram, FaLinkedin } from "react-icons/fa";
 import { motion } from "framer-motion";
 import React, { useRef } from "react";
 import ContactForm from "./ContactForm";
+import Footer from "./Footer";
 
 function Contact({ scrollYProgress }) {
   const constraintsRef = useRef(null)
@@ -25,13 +26,7 @@ function Contact({ scrollYProgress }) {
           <br />
         </motion.div>
          <ContactForm />
-        
-        <div className="contact-card contact-social-icons">
-          <AiFillGithub onClick={() => openInNewTab("https://github.com/brunokalthoff")} />
-          <FaInstagram onClick={() => openInNewTab("https://instagram.com/bru_n_o_")} />
-          <FaLinkedin onClick={() => openInNewTab("https://linkedin.com/in/bkalthoff/")} />
-        </div>
-      
+         <Footer />
     </div>
   );
 }

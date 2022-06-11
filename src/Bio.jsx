@@ -7,7 +7,6 @@ export default function Bio({ scrollYProgress }) {
 
   return (
     <motion.div className="bio">
-
       <motion.img
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -22,8 +21,8 @@ export default function Bio({ scrollYProgress }) {
       </motion.h5>
 
       <motion.p initial={{ opacity: 0 }} animate={{ opacity: 0.7 }}>
-        Bruno is a passionate Full Stack Web Developer from Hamburg, Germany.
-        Since Summer 2021, he actively programs with the MERN-Stack: Vanilla
+        I'm a passionate Full Stack Web Developer from Hamburg, Germany. Since
+        Summer 2021, I actively program with the MERN-Stack: Vanilla
         JavaScript/React.js as frontend technologies, and
         Node.js/Express.js/MongoDB for the backend.
         <br />
@@ -40,28 +39,27 @@ export default function Bio({ scrollYProgress }) {
           <>
             <motion.span>
               {" "}
-              His programming journey began with designing and coding a virtual
+              My programming journey began with designing and coding a virtual
               art exhibition featuring 19 international artists in February
-              2021, and a fascination about the possibilities of the world of
-              programming. Besides further exploring art in the digital realms,
-              Bruno is especially interested in creating efficient CRM-Systems
-              for enterprises - unleashing the full potential of modern web app
-              programming technologies that make handling dynamic, fast-changing
-              content possible. <br />
-              <br />
-              Bruno studied analytical Philosophy & Economics at Humboldt
-              University in Berlin, and has worked in Journalism and Design.
-              His interests are in the fields of Technology, Neuroscience,
-              Philosophy of Mind, Psychology, Art, Literature. Describing his stage, he
-              is "fully engaged in the journey and excited for the future".
-              Currently living in Bali.
+              2021, and a fascination about the possibilities that are in the
+              world of programming. Besides further exploring art in the digital
+              realm, I am interested in creating efficient and individual
+              CRM-Systems for enterprises - unleashing the full potential of
+              modern web app programming technologies that make handling
+              dynamic, fast-changing content possible. <br />
+              <br />I studied analytical Philosophy & Economics at Humboldt
+              University in Berlin, and have worked in Journalism and Design. My
+              interests are in the fields of Technology, Neuroscience,
+              Philosophy of Mind, Psychology, Art, Literature. At this stage, I
+              am fully engaged in the journey and excited for the future.
+              <br />📍 Currently living in Bali.
             </motion.span>
             <br />
             <motion.span
               className="more"
               onClick={() => setReadMore((prev) => !prev)}
             >
-             <br /> <u>less</u>
+              <br /> <u>less</u>
             </motion.span>
           </>
         )}

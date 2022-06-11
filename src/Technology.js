@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { frontendSvg, backendSvg, skillsSvg } from "./svgs";
+import Footer from "./Footer";
 
 export default function Technology() {
   const tech = {
@@ -83,6 +84,7 @@ export default function Technology() {
         </div>
         {skillsSvg}
       </div>
+      <Footer />
     </div>
   );
 }

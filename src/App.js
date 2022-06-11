@@ -6,10 +6,9 @@ import Technology from "./Technology";
 import React, { useState, useEffect, useRef } from "react";
 import Contact from './Contact';
 import Headline from './Headline';
-import MiniBrowser from './MiniBrowser';
 
 function App() {
-    const constraintsRef  = useRef(null);
+    const constraintsRef = useRef(null);
     const [nav, setNav] = useState("Bio");
     const [back, setBack] = useState(null);
     const [glass, setGlass] = useState(false);
@@ -18,14 +17,9 @@ function App() {
     }, [back, nav, glass]);
 
     return (
-        <div ref={constraintsRef } className={glass ? "app" : "app app-mini"}>
-            {/* {!glass && <MiniBrowser constraintsRef ={constraintsRef } setGlass={setGlass} />} */}
+        <div ref={constraintsRef} className={glass ? "app app-mini" : "app app-mini"}>
 
-            {glass && <motion.section layout animate={{
-                scale: [ 0, 1],
-                // rotate: [0, 360],
-                borderRadius: ['50%', '2rem']
-            }} transition={{ duration: .5, type: "spring" }} className="glass">
+            {glass && <motion.section layout initial={{ opacity: 0, y: "50%" }} animate={{ opacity: 1, y: 0 }} transition={{ type: "spring" }} className="glass">
                 <div className="glassActive">
                     <Headline setGlass={setGlass} nav={nav} setNav={setNav} />
                     {nav === "Bio" && <Bio />}

@@ -6,10 +6,12 @@ function ProjectCards({ setBack }) {
     <motion.div className="project-cards" >
       {projectinfo.map((project, i) => {
         return (
-          <motion.div onClick={() => setBack(i+1)} layout initial={{ opacity: 0, x: 0 }} whileInView={{ opacity: 1 }} key={i} className="project">
+          <motion.div onClick={() => setBack(i + 1)} layout initial={{ opacity: 0, x: 0 }} whileInView={{ opacity: 1 }} key={i} className="project">
             <img src={project.src} alt="project_image" />
-            <h3>{project.h}</h3>
-            <p>{project.pShort}</p>
+            <div>
+              <h3>{project.h}</h3>
+              <p>{project.pShort}</p>
+            </div>
           </motion.div>
         )
       })}
