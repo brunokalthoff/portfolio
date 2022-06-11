@@ -21,8 +21,7 @@ export default function Bio({ scrollYProgress }) {
       </motion.h5>
 
       <motion.p initial={{ opacity: 0 }} animate={{ opacity: 0.7 }}>
-        Hey visitor! I'm a passionate Full Stack Web Developer from Hamburg, Germany. Since
-        Summer 2021, I actively program with the MERN-Stack: Vanilla
+        Hey visitor! I'm a passionate Full Stack Web Developer from Hamburg, Germany. I actively program with the MERN-Stack: Vanilla
         JavaScript/React as frontend technologies, and
         Node/Express/MongoDB for the backend.
         <br />
