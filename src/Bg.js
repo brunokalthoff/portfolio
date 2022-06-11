@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { dinosaur } from "./svgs";
+import Footer from "./Footer";
 
 function Bg({ glass, setGlass }) {
 
@@ -14,7 +15,7 @@ function Bg({ glass, setGlass }) {
                     </div>
                 </div>
             }
-
+<Footer />
         </>
     );
 }

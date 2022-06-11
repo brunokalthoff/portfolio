@@ -9,7 +9,7 @@ export default function Projects({ back, setBack }) {
             {!back && <ProjectCards setBack={setBack} />}
 
             {back && <CardBack back={back} setBack={setBack} />}
-            <Footer />
+            {/* <Footer /> */}
         </div>
     );
 }

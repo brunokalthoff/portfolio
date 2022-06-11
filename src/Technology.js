@@ -84,7 +84,7 @@ export default function Technology() {
         </div>
         {skillsSvg}
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

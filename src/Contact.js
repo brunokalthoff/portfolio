@@ -26,7 +26,7 @@ function Contact({ scrollYProgress }) {
           <br />
         </motion.div>
          <ContactForm />
-         <Footer />
+         {/* <Footer /> */}
     </div>
   );
 }
