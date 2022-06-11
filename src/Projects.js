@@ -1,6 +1,5 @@
 import ProjectCards from "./ProjectCards";
 import CardBack from "./CardBack";
-import Footer from "./Footer";
 
 export default function Projects({ back, setBack }) {
     return (
@@ -9,7 +8,6 @@ export default function Projects({ back, setBack }) {
             {!back && <ProjectCards setBack={setBack} />}
 
             {back && <CardBack back={back} setBack={setBack} />}
-            {/* <Footer /> */}
         </div>
     );
 }

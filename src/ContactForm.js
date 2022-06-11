@@ -11,6 +11,15 @@ function ContactForm() {
     const [buttonBg, setButtonBg] = useState('var(--lightBlue)');
     const [buttonVal, setButtonVal] = useState('Send');
 
+    const resetInput = (buttonVal, buttonBg) => {
+        setName('');
+        setEmail('');
+        setPhone('');
+        setNote('');
+        setButtonVal(buttonVal);
+        setButtonBg(buttonBg);
+    }
+
     useEffect(() => {
         setButtonBg('var(--lightBlue)');
         setButtonVal('Send');
@@ -36,23 +45,10 @@ function ContactForm() {
             body: JSON.stringify(data),
         }).then((r) => r.json())
         .then((data) => {
-            // The response comes here
-            console.log(data);
-            setName('');
-            setEmail('');
-            setPhone('');
-            setNote('');
-            setButtonVal('Message sent!');
-            setButtonBg('var(--successGreen)');
+            resetInput('Message sent!', 'var(--successGreen)');
         })
         .catch((error) => {
-            console.log(error);
-            setName('');
-            setEmail('');
-            setPhone('');
-            setNote('');
-            setButtonVal('Error!');
-            setButtonBg('var(--failureRed)');
+            resetInput('Error!', 'var(--failureRed)')
         });
 
         
