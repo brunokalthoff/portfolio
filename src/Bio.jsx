@@ -21,10 +21,10 @@ export default function Bio({ scrollYProgress }) {
       </motion.h5>
 
       <motion.p initial={{ opacity: 0 }} animate={{ opacity: 0.7 }}>
-        I'm a passionate Full Stack Web Developer from Hamburg, Germany. Since
+        Hey visitor! I'm a passionate Full Stack Web Developer from Hamburg, Germany. Since
         Summer 2021, I actively program with the MERN-Stack: Vanilla
-        JavaScript/React.js as frontend technologies, and
-        Node.js/Express.js/MongoDB for the backend.
+        JavaScript/React as frontend technologies, and
+        Node/Express/MongoDB for the backend.
         <br />
         <br />
         {!readMore && (
@@ -40,7 +40,7 @@ export default function Bio({ scrollYProgress }) {
             <motion.span>
               {" "}
               My programming journey began with designing and coding a virtual
-              art exhibition featuring 19 international artists in February
+              art exhibition featuring 19 international artists and friends in February
               2021, and a fascination about the possibilities that are in the
               world of programming. Besides further exploring art in the digital
               realm, I am interested in creating efficient and individual

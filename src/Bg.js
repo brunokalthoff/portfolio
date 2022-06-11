@@ -15,7 +15,7 @@ function Bg({ glass, setGlass }) {
                     </div>
                 </div>
             }
-<Footer />
+{!glass && <Footer />}
         </>
     );
 }

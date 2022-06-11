@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { AiFillGithub } from "react-icons/ai";
 import { FaInstagram, FaLinkedin } from "react-icons/fa";
-import { IoRocketOutline } from "react-icons/io5";
 import { ImUser } from 'react-icons/im';
 import { SiMinutemailer } from "react-icons/si";
 import { GiRayGun } from "react-icons/gi";
@@ -34,7 +33,7 @@ function Headline({ nav, setNav, setGlass }) {
             <nav>
                 <motion.div layout className={nav === "Bio" ? "nav-tab-active" : "nav-tab-inactive"} onClick={() => setNav("Bio")}><ImUser title='Bio' /><motion.span>Bio</motion.span></motion.div>
                 <motion.div layout className={nav === "Projects" ? "nav-tab-active" : "nav-tab-inactive"} onClick={() => setNav("Projects")}><BiCodeBlock title='Projects' /> <span>Projects</span> </motion.div>
-                <motion.div layout className={nav === "Technology" ? "nav-tab-active" : "nav-tab-inactive"} onClick={() => setNav("Technology")}><GiRayGun title='Technologies' /> <span>Tech Stack</span> </motion.div>
+                <motion.div layout className={nav === "Technology" ? "nav-tab-active" : "nav-tab-inactive"} onClick={() => setNav("Technology")}><GiRayGun title='Technologies' /> <span>Tech</span> </motion.div>
                 <motion.div layout className={nav === "Contact" ? "nav-tab-active" : "nav-tab-inactive"} onClick={() => setNav("Contact")} ><SiMinutemailer title='Contact' /><span>Contact</span></motion.div>
             </nav>
         </motion.div>
