@@ -498,6 +498,10 @@ textarea:focus {
   font-size: 1.5rem;
 }
 
+.social-icons svg:hover {
+filter: brightness(1.1);
+}
+
 .headline h2 {
   position: relative;
   color: #85b1d4;

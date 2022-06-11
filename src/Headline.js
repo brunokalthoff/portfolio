@@ -1,10 +1,7 @@
 import { motion } from "framer-motion";
 import { AiFillGithub } from "react-icons/ai";
 import { FaInstagram, FaLinkedin } from "react-icons/fa";
-import { ImUser } from 'react-icons/im';
-import { SiMinutemailer } from "react-icons/si";
-import { GiRayGun } from "react-icons/gi";
-import { BiCodeBlock } from "react-icons/bi";
+import { ImPacman, ImBubbles, ImRocket, ImStack } from 'react-icons/im';
 import { AiFillCloseCircle } from "react-icons/ai";
 import { FaCircle } from "react-icons/fa";
 
@@ -31,10 +28,10 @@ function Headline({ nav, setNav, setGlass }) {
                 </div>
             </div>
             <nav>
-                <motion.div layout className={nav === "Bio" ? "nav-tab-active" : "nav-tab-inactive"} onClick={() => setNav("Bio")}><ImUser title='Bio' /><motion.span>Bio</motion.span></motion.div>
-                <motion.div layout className={nav === "Projects" ? "nav-tab-active" : "nav-tab-inactive"} onClick={() => setNav("Projects")}><BiCodeBlock title='Projects' /> <span>Projects</span> </motion.div>
-                <motion.div layout className={nav === "Technology" ? "nav-tab-active" : "nav-tab-inactive"} onClick={() => setNav("Technology")}><GiRayGun title='Technologies' /> <span>Tech</span> </motion.div>
-                <motion.div layout className={nav === "Contact" ? "nav-tab-active" : "nav-tab-inactive"} onClick={() => setNav("Contact")} ><SiMinutemailer title='Contact' /><span>Contact</span></motion.div>
+                <motion.div layout className={nav === "Bio" ? "nav-tab-active" : "nav-tab-inactive"} onClick={() => setNav("Bio")}><ImPacman title='Bio' /><motion.span>Bio</motion.span></motion.div>
+                <motion.div layout className={nav === "Projects" ? "nav-tab-active" : "nav-tab-inactive"} onClick={() => setNav("Projects")}><ImRocket title='Projects' /> <span>Projects</span> </motion.div>
+                <motion.div layout className={nav === "Technology" ? "nav-tab-active" : "nav-tab-inactive"} onClick={() => setNav("Technology")}><ImStack title='Technologies' /> <span>Stack</span> </motion.div>
+                <motion.div layout className={nav === "Contact" ? "nav-tab-active" : "nav-tab-inactive"} onClick={() => setNav("Contact")} ><ImBubbles title='Contact' /><span>Contact</span></motion.div>
             </nav>
         </motion.div>
     );
