@@ -40,8 +40,8 @@ export default function Bio({ scrollYProgress }) {
               {" "}
               My programming journey began with designing and coding a virtual
               art exhibition featuring 19 international artists and friends in February
-              2021, and a fascination about the possibilities that are in the
-              world of programming. Besides further exploring art in the digital
+              2021, and a fascination about the possibilities that the
+              world of programming offers. Besides further exploring art in the digital
               realm, I am interested in creating efficient and individual
               CRM-Systems for enterprises - unleashing the full potential of
               modern web app programming technologies that make handling
