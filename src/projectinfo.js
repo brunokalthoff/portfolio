@@ -33,7 +33,7 @@ export const projectinfo = [
     h: "ETG#1: Enter The Gateway",
     pShort: "Virtual art exhibition",
     pLong: <>This virtual art exhibition was online for 28 days in February 2021. It shows some of my then-recent artworks and those of 18 artists and friends, most of which I met during my journey being a digital nomad in the Philippines in 2020.<br /><br />While the pandemic kept the world on hold, I was fortunate enough to feel greatly inspired by living on the small pacific island Siargao for a year. Certainly, the inspiration arose from the uncertainty inherent to the special time the world was experiencing, the beauty and rawness of the island, and the simple island life - ultimately amplified by my vivid, intimate social surroundings. ETG#1 was born from this inspiration.<br /><br />The exhibit was to share some of it, to give my very talented friends a humble platform for presenting their artworks. And, nonetheless, to celebrate the beauty of life! Also, this exhibition was thought to be the first of many more to come, one every year. Watch out for the next one!</>,
-    tech: ["Vanilla CSS", "React.js", "SSR"]
+    tech: ["Vanilla CSS", "React.js"]
   },
   {
     src: paintbrush,
@@ -41,7 +41,7 @@ export const projectinfo = [
     link: "https://feedbackpostcards.netlify.app/",
     gh: "https://github.com/brunokalthoff/JS-Art-RootBrush",
     h: "RootBrush",
-    pShort: "Artsy digital drawing app",
+    pShort: "Creative digital drawing app",
     pLong: <>This web app lets you make digital artworks with a somewhat funky styled paintbrush. On strokes, the brush draws by animating root growth, randomizing the direction, length and curvature of each root. You can adjust the density, curvature, length, and color of the roots, and the canvas' background color. Check it out and get creative!<br /><br />At this stage, the app is written as a tool to leave feedback to a website - likely it will be integrated into the next ETG-series of online exhibitions. Another idea is to integrate it into an upcoming app called 'Letter to Self' that enables you to write a postcard to yourself and receive it by post at any chosen time in the future.<br /><br />For showcasing, I have attached it to the (now officially offline) ETG#1. It allows you to use the animated brush to draw on a square canvas. You may then hit save, add some text and upload your card to a public dashboard where it will be seen by the other visitors.</>,
     tech: ["Vanilla CSS", "Vanilla JavaScript", "Express.js", "MongoDB"]
   },
@@ -63,7 +63,7 @@ export const projectinfo = [
     h: "ETG#2: Remember the Mesozoics?",
     pShort: "Virtual art exhibition",
     pLong: "Second exhibition of the ETG series. Going online in July 2022",
-    tech: ["Tailwind CSS", "Framer Motion", "React.js", "Express.js", "MongoDB", "User Authorization & Autentification", "Encryption & Hashing"]
+    tech: ["Tailwind CSS", "Framer Motion", "React.js", "Express.js", "MongoDB", "Authorization", "Authentication ", "Encryption & Hashing"]
   },
   {
     src: blockchain,
@@ -72,7 +72,7 @@ export const projectinfo = [
     gh: "link",
     h: "ArtCoin",
     pShort: "Blockchain generating algorithmic artworks",
-    pLong: "This Simulation makes it easy understand how a cryptocurrency runs on a decentralized blockchain. It visualy explains pending transactions, mining, node validation, hashing, public and private keys. You can add & remove features and discover how proofing mechanisms, block mining, mining rewards, pending transaction etc. actually work.",
-    tech: ["Tailwind CSS", "React.js", "Express.js", "Firebase"]
+    pLong: "This blockchain running a cryptocurrency also hosts several algorithms for making generative artworks. Each newly mined block feeds an algorithm, chosen by the miner, with its token transaction data and makes a unique artwork from it. The works are auto uploaded into an open constantly growing digital exhibition, and they are also pushed to twitter",
+    tech: ["Vanilla JS", "React.js", "Tailwind CSS", "Express in Node.js", "Firebase", "Authorization", "Authentication ", "Cryptography"]
   },
 ];

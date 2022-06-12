@@ -18,7 +18,7 @@
   --fill: #545265;
   --successGreen: #4b8f75;
   --failureRed: #b4557e;
-
+  --inbetweenYellow: rgba(164, 214, 2, 0.682);
   --palletePurple: #221126;
   --palleteBlack: #16091f;
   --palleteYellow: var(--yellow);
@@ -155,7 +155,7 @@ nav div svg {
   border-bottom: 1px solid var(--yellow);
   color: var(--white);
   background-color: rgb(29, 36, 42);
-  cursor:default;
+  cursor: default;
 }
 
 .nav-tab-active span {
@@ -288,7 +288,6 @@ textarea {
   resize: none;
   height: 100%;
   padding: 0.4rem 0;
-  
 }
 
 .contact-form label span {
@@ -377,12 +376,11 @@ textarea:focus {
 }
 
 .headline-buttons-left svg:nth-child(1) {
-  color: var(--palletePink);
+  color: lightblue;
   cursor: pointer;
 }
 .headline-buttons-left svg:nth-child(2) {
   color: var(--lightBlue);
- 
 }
 .headline-buttons-left svg:nth-child(3) {
   color: var(--successGreen);
@@ -746,11 +744,6 @@ textarea:focus {
   .social-icons svg {
     font-size: 1.5rem;
   }
-
-  /* .headline-buttons-left svg:nth-child(2),
-  .headline-buttons-left svg:nth-child(3) {
-    display: none;
-  } */
 
   .project > div {
     display: flex;

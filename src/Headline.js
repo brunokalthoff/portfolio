@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { AiFillGithub } from "react-icons/ai";
 import { FaInstagram, FaLinkedin } from "react-icons/fa";
-import { ImPacman, ImBubbles, ImRocket, ImStack } from 'react-icons/im';
+// import { ImPacman, ImBubbles, ImRocket, ImStack } from 'react-icons/im';
 import { AiFillCloseCircle } from "react-icons/ai";
 import { FaCircle } from "react-icons/fa";
 
@@ -15,11 +15,11 @@ function Headline({ nav, setNav, setGlass }) {
         <motion.div className="headline">
             <div className="headline-line">
                 <div className="headline-buttons-left">
-                    <AiFillCloseCircle size={14.4} onClick={() => setGlass(false)} />
-                    <FaCircle size={13} />
-                    <FaCircle size={13} />
+                    <AiFillCloseCircle size={12} onClick={() => setGlass(false)} />
+                    <FaCircle size={11} />
+                    <FaCircle size={11} />
                 </div>
-                <div className="crunchrocket">Bruno Kalthoff<br />Portfolio</div>
+                <div className="crunchrocket">Portfolio</div>
 
                 <div className="social-icons">
                     <AiFillGithub onClick={() => openInNewTab("https://github.com/brunokalthoff")} />
