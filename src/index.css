@@ -245,9 +245,7 @@ nav div {
   padding-left: 1rem;
 }
 
-nav svg {
-  z-index: 0;
-  font-size: 1.3rem;
+nav div svg {
   transition: all 0.4;
 }
 
@@ -466,10 +464,8 @@ textarea:focus {
   transform: translateX(-50%);
   pointer-events: none;
   color: rgb(212, 212, 212);
-}
-
-.crunchrocket::after {
-  content: " - Portfolio";
+  max-width: 33%;
+  text-align: center;
 }
 
 .headline-buttons-left svg {
@@ -491,7 +487,7 @@ textarea:focus {
   font-size: 1.2rem;
 }
 
-.social-icons svg {
+.social-icons svg {   
   color: lightblue;
   cursor: pointer;
   margin: 0.1rem;
@@ -762,12 +758,6 @@ filter: brightness(1.1);
   flex-wrap: wrap-reverse;
 }
 
-/* .frontend > div,
-.backend > div,
-.skills > div {
-  min-width: 300px;
-} */
-
 .technology svg {
   width: 30%;
   height: 250px;
@@ -780,8 +770,16 @@ filter: brightness(1.1);
   }
   .glass {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     border-radius: 0;
+    border: none;
+  }
+
+  .bio p {
+    width: 80%;
+  }
+
+  .project {
     border: none;
   }
 
@@ -796,6 +794,33 @@ filter: brightness(1.1);
 
   nav {
     height: 4rem;
+  }
+
+  nav div {
+    cursor: pointer;
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 1;
+    transition: all 0.4;
+    border-radius: 1rem 1rem 0 0;
+    /* background-color: rgb(15, 20, 24); */
+    background-color: inherit;
+    z-index: 10000;
+    color: var(--grey);
+    padding-left: .7rem;
+  }
+
+  nav div span {
+    font-size: .7rem;
+  }
+  
+  nav div svg {
+    padding: .1rem;
+    z-index: 0;
+    transition: all 0.4;
   }
 
   .social-icons {

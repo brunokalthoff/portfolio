@@ -19,7 +19,7 @@ function Headline({ nav, setNav, setGlass }) {
                     <FaCircle size={13} />
                     <FaCircle size={13} />
                 </div>
-                    <div className="crunchrocket">Bruno Kalthoff</div>
+                    <div className="crunchrocket">Bruno Kalthoff<br />Portfolio 💬</div>
 
                 <div className="social-icons">
                     <AiFillGithub onClick={() => openInNewTab("https://github.com/brunokalthoff")} />
