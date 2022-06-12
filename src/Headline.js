@@ -19,7 +19,7 @@ function Headline({ nav, setNav, setGlass }) {
                     <FaCircle size={13} />
                     <FaCircle size={13} />
                 </div>
-                    <div className="crunchrocket">Bruno Kalthoff<br />Portfolio 💬</div>
+                <div className="crunchrocket">Bruno Kalthoff<br />Portfolio</div>
 
                 <div className="social-icons">
                     <AiFillGithub onClick={() => openInNewTab("https://github.com/brunokalthoff")} />
@@ -28,10 +28,10 @@ function Headline({ nav, setNav, setGlass }) {
                 </div>
             </div>
             <nav>
-                <motion.div layout className={nav === "Bio" ? "nav-tab-active" : "nav-tab-inactive"} onClick={() => setNav("Bio")}><ImPacman title='Bio' /><motion.span>Bio</motion.span></motion.div>
-                <motion.div layout className={nav === "Projects" ? "nav-tab-active" : "nav-tab-inactive"} onClick={() => setNav("Projects")}><ImRocket title='Projects' /> <span>Projects</span> </motion.div>
-                <motion.div layout className={nav === "Technology" ? "nav-tab-active" : "nav-tab-inactive"} onClick={() => setNav("Technology")}><ImStack title='Technologies' /> <span>Stack</span> </motion.div>
-                <motion.div layout className={nav === "Contact" ? "nav-tab-active" : "nav-tab-inactive"} onClick={() => setNav("Contact")} ><ImBubbles title='Contact' /><span>Contact</span></motion.div>
+                <motion.div  className={nav === "Bio" ? "nav-tab-active" : "nav-tab-inactive"} onClick={() => setNav("Bio")}><span style={{ fontSize: '1.2rem' }}>🧑</span><motion.span>Bio</motion.span></motion.div>
+                <motion.div  className={nav === "Projects" ? "nav-tab-active" : "nav-tab-inactive"} onClick={() => setNav("Projects")}><span style={{ fontSize: '1.2rem' }}>✨</span><span>Projects</span> </motion.div>
+                <motion.div  className={nav === "Technology" ? "nav-tab-active" : "nav-tab-inactive"} onClick={() => setNav("Technology")}><span style={{ fontSize: '1.2rem' }}>🚀</span> <span>Stack</span> </motion.div>
+                <motion.div  className={nav === "Contact" ? "nav-tab-active" : "nav-tab-inactive"} onClick={() => setNav("Contact")} ><span style={{ fontSize: '1.2rem' }}>💬</span><span>Contact</span></motion.div>
             </nav>
         </motion.div>
     );

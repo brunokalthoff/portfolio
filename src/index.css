@@ -3,7 +3,6 @@
   line-height: 1.8;
   --lightBlue: #3ca4ff;
 
-  /* --lightBlue: #aa96fb; */
   --middleBlue: rgb(19, 47, 76);
   --middleDarkerBlue: rgb(0, 30, 60);
   --darkBlue: rgb(10, 25, 41);
@@ -83,108 +82,11 @@ svg {
 .app {
   position: relative;
   min-height: 100vh;
-  background: var(--darkestBlue);
-  background: #1a1a1a;
-  background: #0e1820;
-  background: linear-gradient(#4891ca, #85b1d4);
-  background: linear-gradient(var(--darkBlue), lightblue);
-  background: linear-gradient(to top right, #271428, #080018);
-  background: var(--palleteBlue);
-  background: var(--darkestBlue);
-  /* background: #4931ab;
-  background: linear-gradient(to top, #240922, var(--lightBlue));
-  background: linear-gradient(to top, #78b3ee, #d6cde9); */
+  background: linear-gradient(to top, #111d25, rgb(15, 20, 24));
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-}
-
-.app-mini {
-  background: linear-gradient(to top, #111d25, rgb(15, 20, 24));
-}
-
-.circle {
-  position: absolute;
-  top: -200px;
-  left: 0;
-  height: 200%;
-  width: 100%;
-  color: rgb(178, 153, 184);
-  font-weight: 100;
-  word-break: break-all;
-  font-size: 3rem;
-  pointer-events: none;
-  opacity: 0.2;
-}
-
-.ball1 {
-  position: absolute;
-  top: 4rem;
-  left: 5rem;
-  width: 20rem;
-  height: 20rem;
-  background-color: var(--yellow);
-  opacity: 1;
-  border-radius: 50%;
-  backdrop-filter: blur(1px);
-  z-index: 2;
-}
-
-.app > div svg path {
-  color: #aa71d6;
-}
-
-#cloud1 {
-  position: absolute;
-  top: 3rem;
-  left: 3rem;
-  z-index: 1;
-  opacity: 0.6;
-  transform: scale(0.8);
-}
-
-#cloud2 {
-  position: absolute;
-  margin: 2rem;
-  top: 0;
-  right: 0;
-  z-index: 1;
-  opacity: 0.6;
-}
-
-#cloud3 svg {
-  position: absolute;
-  bottom: 20%;
-  left: 0;
-  z-index: 1;
-  transform: scale(0.8);
-  opacity: 0.6;
-}
-
-#cloud4 svg {
-  position: absolute;
-  bottom: 20%;
-  right: 10rem;
-  z-index: 1;
-  opacity: 0.6;
-}
-
-#cloud5 svg {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  opacity: 0.6;
-}
-
-.eyes {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  font-size: 5rem;
-  pointer-events: none;
 }
 
 .glass {
@@ -253,6 +155,7 @@ nav div svg {
   border-bottom: 1px solid var(--yellow);
   color: var(--white);
   background-color: rgb(29, 36, 42);
+  cursor:default;
 }
 
 .nav-tab-active span {
@@ -385,6 +288,7 @@ textarea {
   resize: none;
   height: 100%;
   padding: 0.4rem 0;
+  
 }
 
 .contact-form label span {
@@ -478,24 +382,27 @@ textarea:focus {
 }
 .headline-buttons-left svg:nth-child(2) {
   color: var(--lightBlue);
+ 
 }
 .headline-buttons-left svg:nth-child(3) {
   color: var(--successGreen);
+  color: var(--palleteBlue);
+  /* filter: brightness(.5); */
 }
 
 .headline svg {
   font-size: 1.2rem;
 }
 
-.social-icons svg {   
+.social-icons svg {
   color: lightblue;
   cursor: pointer;
-  margin: 0.1rem;
-  font-size: 1.5rem;
+  margin: 0.2rem;
+  font-size: 1.3rem;
 }
 
 .social-icons svg:hover {
-filter: brightness(1.1);
+  filter: brightness(1.1);
 }
 
 .headline h2 {
@@ -636,7 +543,7 @@ filter: brightness(1.1);
 
 .project > div {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   width: 100%;
 }
 
@@ -768,9 +675,19 @@ filter: brightness(1.1);
   .inner-carousel {
     padding: 0 calc(50% - 5rem);
   }
+
+  .app {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
   .glass {
     width: 100%;
+    max-width: 100%;
     height: 100%;
+    max-height: 100%;
     border-radius: 0;
     border: none;
   }
@@ -806,19 +723,18 @@ filter: brightness(1.1);
     z-index: 1;
     transition: all 0.4;
     border-radius: 1rem 1rem 0 0;
-    /* background-color: rgb(15, 20, 24); */
     background-color: inherit;
     z-index: 10000;
     color: var(--grey);
-    padding-left: .7rem;
+    padding-left: 0.5rem;
   }
 
   nav div span {
-    font-size: .7rem;
+    font-size: 0.7rem;
   }
-  
+
   nav div svg {
-    padding: .1rem;
+    padding: 0.1rem;
     z-index: 0;
     transition: all 0.4;
   }

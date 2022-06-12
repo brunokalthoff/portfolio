@@ -1,5 +1,3 @@
-import { FiSend } from "react-icons/fi";
-import { FaWhatsapp } from "react-icons/fa";
 import { motion } from "framer-motion";
 import React, { useRef } from "react";
 import ContactForm from "./ContactForm";
@@ -11,9 +9,9 @@ function Contact({ scrollYProgress }) {
       <motion.div
         className="contact-card">
         <p>
-          <FiSend />
-          bruno.kalthoff@gmail.com <br />
-          <FaWhatsapp />+49 15777 801 086 <br />
+          
+          <span style={{ fontSize: '1rem' }}>📯 </span>bruno.kalthoff@gmail.com <br />
+          <span style={{ fontSize: '1rem' }}>📲 </span>+49 15777 801 086 <br />
         </p>
         <br />
       </motion.div>
