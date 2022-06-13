@@ -93,7 +93,7 @@ export const projectinfo = [
     gh: "link",
     h: "basic Berlin",
     pShort: "Website design & copywriting for furniture stores",
-    pLong: "basic runs two trendy and successfull interior design stores in the heart of Berlin's Prenzlauer Berg. Here's their website, showcasing some of their favorite furniture collections, and describing their services.",
+    pLong: "basic run two very successful trendy interior design stores in the heart of Berlin's Prenzlauer Berg. Online they showcase some of their favorite furniture collections and describe their services.",
     code: ["-"],
     design: ["Figma", "Illustrator"],
   },
@@ -104,7 +104,7 @@ export const projectinfo = [
     gh: "link",
     h: "Vertriebspuls",
     pShort: "Website design & copywriting for sales consultant",
-    pLong: "Diego Machemer is a German sales consultant. On his website he shows off his consultancy.",
+    pLong: "Diego Machemer is a German sales consultant. On his website, he shows off his consultancy.",
     code: ["-"],
     design: ["Photoshop", "Illustrator"]
   },
