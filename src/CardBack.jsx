@@ -22,38 +22,42 @@ export default function CardBack({ back, setBack }) {
           <ImgSlider back={back} />
         </div>
 
-        {projectinfo[index].link !== "link" &&
-          projectinfo[index].gh !== "link" && (
-            <div>
-              {projectinfo[index].link !== "link" && (
-                <a
-                  href={projectinfo[index].link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  disabled
-                >
-                  {/* {projectinfo[index].link} */}
-                  <CgWebsite /> <u>Open Website</u>
-                </a>
-              )}
+        {(projectinfo[index].link !== "link" ||
+          projectinfo[index].gh !== "link") && (
+          <div>
+            {projectinfo[index].link !== "link" && (
+              <a
+                href={projectinfo[index].link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <CgWebsite /> <u>Open Website</u>
+              </a>
+            )}
 
-              {projectinfo[index].gh !== "link" && (
-                <a
-                  href={projectinfo[index].gh}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {/* {projectinfo[index].gh} */}
-                  <FiGithub /> <u>See GitHub Repo</u>
-                </a>
-              )}
-            </div>
-          )}
+            {projectinfo[index].gh !== "link" && (
+              <a
+                href={projectinfo[index].gh}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FiGithub /> <u>See GitHub Repo</u>
+              </a>
+            )}
+          </div>
+        )}
 
         <div className="card-back-infos-tech">
           <h3>Technologies</h3>
+          <h4>Code</h4>
           <ul>
-            {projectinfo[index].tech.map((x) => (
+            {projectinfo[index].code.map((x) => (
+              <p>{x}</p>
+            ))}
+          </ul>
+          <h4>Design</h4>
+          <ul>
+            {projectinfo[index].design.map((x) => (
               <p>{x}</p>
             ))}
           </ul>

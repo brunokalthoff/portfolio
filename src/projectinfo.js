@@ -2,6 +2,8 @@ import ufo from "./images/ufo.png";
 import paintbrush from "./images/paintbrush.jpg";
 import kw from "./images/kw.jpg";
 import blockchain from "./images/blockchain.jpg";
+import basic from "./images/basic.jpg";
+import vp from "./images/vp.png";
 import dinos from "./images/dinos.jpg";
 import etg11 from "./images/slider/etg11.png";
 import etg12 from "./images/slider/etg12.png";
@@ -23,6 +25,10 @@ import etm1 from "./images/slider/etm1.jpg";
 import etm2 from "./images/slider/etm2.jpg";
 import etm3 from "./images/slider/etm3.jpg";
 import ac1 from "./images/slider/ac1.jpg";
+import bb1 from "./images/slider/bb1.jpg";
+import bb2 from "./images/slider/bb2.jpg";
+import vp1 from "./images/slider/vp1.jpg";
+import vp2 from "./images/slider/vp2.jpg";
 
 export const projectinfo = [
   {
@@ -33,7 +39,8 @@ export const projectinfo = [
     h: "ETG#1: Enter The Gateway",
     pShort: "Virtual art exhibition",
     pLong: <>This virtual art exhibition was online for 28 days in February 2021. It shows some of my then-recent artworks and those of 18 artists and friends, most of which I met during my journey being a digital nomad in the Philippines in 2020.<br /><br />While the pandemic kept the world on hold, I was fortunate enough to feel greatly inspired by living on the small pacific island Siargao for a year. Certainly, the inspiration arose from the uncertainty inherent to the special time the world was experiencing, the beauty and rawness of the island, and the simple island life - ultimately amplified by my vivid, intimate social surroundings. ETG#1 was born from this inspiration.<br /><br />The exhibit was to share some of it, to give my very talented friends a humble platform for presenting their artworks. And, nonetheless, to celebrate the beauty of life! Also, this exhibition was thought to be the first of many more to come, one every year. Watch out for the next one!</>,
-    tech: ["Vanilla CSS", "React.js"]
+    code: ["Vanilla CSS", "React.js"],
+    design: ["Photoshop", "MS Paint ;)"],
   },
   {
     src: paintbrush,
@@ -43,7 +50,8 @@ export const projectinfo = [
     h: "RootBrush",
     pShort: "Creative digital drawing app",
     pLong: <>This web app lets you make digital artworks with a somewhat funky styled paintbrush. On strokes, the brush draws by animating root growth, randomizing the direction, length and curvature of each root. You can adjust the density, curvature, length, and color of the roots, and the canvas' background color. Check it out and get creative!<br /><br />At this stage, the app is written as a tool to leave feedback to a website - likely it will be integrated into the next ETG-series of online exhibitions. Another idea is to integrate it into an upcoming app called 'Letter to Self' that enables you to write a postcard to yourself and receive it by post at any chosen time in the future.<br /><br />For showcasing, I have attached it to the (now officially offline) ETG#1. It allows you to use the animated brush to draw on a square canvas. You may then hit save, add some text and upload your card to a public dashboard where it will be seen by the other visitors.</>,
-    tech: ["Vanilla CSS", "Vanilla JavaScript", "Express.js", "MongoDB"]
+    code: ["Vanilla CSS", "Vanilla JavaScript", "Express.js", "MongoDB"],
+    design: ["-"],
   },
   {
     src: kw,
@@ -53,7 +61,8 @@ export const projectinfo = [
     h: "Keller Williams",
     pShort: "Real estate consultancy franchise website",
     pLong: "The leading Canadian Real Estate Consultancy Keller Williams has opened a new franchise: The Milton Market Center. Here's their website.",
-    tech: ["Vanilla CSS", "React.js", "Framer Motion"]
+    code: ["Vanilla CSS", "React.js", "Framer Motion"],
+    design: ["Design by Keller Williams"],
   },
   {
     src: dinos,
@@ -63,7 +72,8 @@ export const projectinfo = [
     h: "ETG#2: Remember the Mesozoics?",
     pShort: "Virtual art exhibition",
     pLong: "Second exhibition of the ETG series. Going online in July 2022",
-    tech: ["Tailwind CSS", "Framer Motion", "React.js", "Express.js", "MongoDB", "Authorization", "Authentication ", "Encryption & Hashing"]
+    code: ["Tailwind CSS", "Framer Motion", "React.js", "Express.js", "MongoDB", "Authorization", "Authentication ", "Encryption & Hashing"],
+    design: ["Figma", "Inkscape"],
   },
   {
     src: blockchain,
@@ -73,6 +83,29 @@ export const projectinfo = [
     h: "ArtCoin",
     pShort: "Blockchain generating algorithmic artworks",
     pLong: "This blockchain running a cryptocurrency also hosts several algorithms for making generative artworks. Each newly mined block feeds an algorithm, chosen by the miner, with its token transaction data and makes a unique artwork from it. The works are auto uploaded into an open constantly growing digital exhibition, and they are also pushed to twitter",
-    tech: ["Vanilla JS", "React.js", "Tailwind CSS", "Express in Node.js", "Firebase", "Authorization", "Authentication ", "Cryptography"]
+    code: ["Vanilla JS", "React.js", "Tailwind CSS", "Express in Node.js", "Firebase", "Authorization", "Authentication ", "Cryptography"],
+    design: ["-"],
+  },
+  {
+    src: basic,
+    slider: [bb1, bb2],
+    link: "https://basic-berlin.de/",
+    gh: "link",
+    h: "basic Berlin",
+    pShort: "Website design & copywriting for furniture stores",
+    pLong: "basic runs two trendy and successfull interior design stores in the heart of Berlin's Prenzlauer Berg. Here's their website, showcasing some of their favorite furniture collections, and describing their services.",
+    code: ["-"],
+    design: ["Figma", "Illustrator"],
+  },
+  {
+    src: vp,
+    slider: [vp1, vp2],
+    link: "https://vertriebspuls.de/",
+    gh: "link",
+    h: "Vertriebspuls",
+    pShort: "Website design & copywriting for sales consultant",
+    pLong: "Diego Machemer is a German sales consultant. On his website he shows off his consultancy.",
+    code: ["-"],
+    design: ["Photoshop", "Illustrator"]
   },
 ];

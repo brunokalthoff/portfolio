@@ -15,7 +15,7 @@ function Headline({ nav, setNav, setGlass }) {
         <motion.div className="headline">
             <div className="headline-line">
                 <div className="headline-buttons-left">
-                    <AiFillCloseCircle size={12} onClick={() => setGlass(false)} />
+                    <AiFillCloseCircle size={13} onClick={() => setGlass(false)} />
                     <FaCircle size={11} />
                     <FaCircle size={11} />
                 </div>

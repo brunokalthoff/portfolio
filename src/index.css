@@ -23,7 +23,8 @@
   --palleteBlack: #16091f;
   --palleteYellow: var(--yellow);
   --palleteBlue: #2f67a7;
-  --palletePink: #c3b1d1;
+  --palletePink: #ffa9ff;
+  --yo: #c5832d;
 }
 
 * {
@@ -221,44 +222,24 @@ nav div span {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding: 2.5rem 0 0;
-}
-
-.contact svg {
-  font-size: 1.5rem;
-  opacity: 1;
+  padding: 2rem 0;
 }
 
 .contact-card {
-  border-radius: 1rem;
-  color: white;
-  padding: 1rem 4rem 1rem 2rem;
-  width: clamp(300px, 50%, 400px);
-}
-
-.contact-card h4 {
-  color: rgba(255, 255, 255, 0.877);
+  text-align: left;
+  width: 50%;
+  padding: 2rem;
 }
 
 .contact-card p {
-  opacity: 0.95;
-  padding: 0.3rem 0 0;
-  color: rgba(255, 255, 255, 0.877);
-}
-
-.contact-card p svg {
-  vertical-align: middle;
-  margin: 0.2rem 0;
-  margin-right: 0.6rem;
-  color: var(--successGreen);
-  font-size: 1.2rem;
   opacity: 1;
+  margin: 0.3rem 0;
+  text-align: left;
 }
 
 .contact-form {
   display: flex;
   flex-direction: column;
-  padding: 0 2rem 2rem;
   z-index: 2;
 }
 
@@ -383,13 +364,15 @@ textarea:focus {
   color: var(--lightBlue);
 }
 .headline-buttons-left svg:nth-child(3) {
-  color: var(--successGreen);
-  color: var(--palleteBlue);
-  /* filter: brightness(.5); */
+  color: var(--lightBlue);
 }
 
 .headline svg {
   font-size: 1.2rem;
+}
+
+#inside path {
+fill: #c5832d;
 }
 
 .social-icons svg {
@@ -583,6 +566,17 @@ textarea:focus {
   margin-bottom: 2rem;
 }
 
+.card-back h3 {
+  color: var(--lightBlue);
+}
+
+.card-back h4 {
+  color: var(--white);
+  font-weight: 300;
+  padding: 0.5rem 0 0;
+  color: lightblue;
+}
+
 .card-back-description {
   height: 100%;
   width: clamp(300px, 50%, 500px);
@@ -638,28 +632,25 @@ textarea:focus {
   cursor: default;
 }
 
-.technology div {
+.technology > div {
   margin: 0 0 5rem;
-}
-
-.frontend h3,
-.backend h3,
-.skills h3 {
-  padding: 2rem 0;
-}
-
-.frontend,
-.backend,
-.skills {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   align-items: center;
   justify-content: space-evenly;
-  gap: 0rem;
 }
 
-.backend {
+.technology > div h3 {
+  padding: 2rem 0 1rem;
+}
+
+.technology > div p {
+  padding: 0 1rem;
+}
+
+.backend,
+.design {
   flex-wrap: wrap-reverse;
 }
 
@@ -716,7 +707,7 @@ textarea:focus {
     width: 100%;
     min-height: 100%;
     display: flex;
-    justify-content: flex-start;
+    /* justify-content: center; */
     align-items: center;
     z-index: 1;
     transition: all 0.4;
@@ -724,7 +715,7 @@ textarea:focus {
     background-color: inherit;
     z-index: 10000;
     color: var(--grey);
-    padding-left: 0.5rem;
+    padding-left: 0.3rem;
   }
 
   nav div span {
@@ -762,7 +753,7 @@ textarea:focus {
   }
 
   .contact-card {
-    width: auto;
+    width: 100%;
   }
   .contact-form {
     width: 100%;

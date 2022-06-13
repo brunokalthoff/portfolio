@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { frontendSvg, backendSvg, skillsSvg } from "./svgs";
+import { frontendSvg, backendSvg, skillsSvg, designSvg } from "./svgs";
 
 export default function Technology() {
   const tech = {
@@ -17,12 +17,13 @@ export default function Technology() {
     ],
     backend: ["Node.js", "Express.js", "MongoDB", "Firebase"],
     skills: [
-      "Authentication",
-      "Authorization",
+      "User Authentication",
+      "User Authorization",
       "Cryptography",
-      "Hashing",
-      "OAuth2",
+      "Hashing Algorithms",
+      "OAuth 2.0",
     ],
+    addons: ["Photoshop", "Illustrator", "Figma", "Inkskape"],
   };
 
   return (
@@ -82,6 +83,26 @@ export default function Technology() {
           })}
         </div>
         {skillsSvg}
+      </div>
+
+      <div className="design">
+        {designSvg}
+        <div>
+          <h3>Design</h3>
+          {tech.addons.map((addon, i) => {
+            return (
+              <motion.p
+                whileHover={{ scale: 1.1 }}
+                initial={{ opacity: 0, x: -3 }}
+                animate={{ opacity: 1, x: 5, transition: { delay: i * 0.05 } }}
+                key={i}
+              >
+                {" "}
+                {addon}
+              </motion.p>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
