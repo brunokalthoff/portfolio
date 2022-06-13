@@ -21,18 +21,35 @@ export default function CardBack({ back, setBack }) {
         <div className="card-back-infos-imgslider">
           <ImgSlider back={back} />
         </div>
-        
-        {projectinfo[index].link !== "link" && 
-        <div><a href={projectinfo[index].link} target="_blank" rel="noopener noreferrer" disabled>
-            {/* {projectinfo[index].link} */}
-            <CgWebsite /> <u>Open Website</u>
-          </a>
-          <a href={projectinfo[index].gh} target="_blank" rel="noopener noreferrer">
-            {/* {projectinfo[index].gh} */}
-            <FiGithub /> <u>See GitHub Repo</u>
-          </a></div>}
 
-        
+        {projectinfo[index].link !== "link" &&
+          projectinfo[index].gh !== "link" && (
+            <div>
+              {projectinfo[index].link !== "link" && (
+                <a
+                  href={projectinfo[index].link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  disabled
+                >
+                  {/* {projectinfo[index].link} */}
+                  <CgWebsite /> <u>Open Website</u>
+                </a>
+              )}
+
+              {projectinfo[index].gh !== "link" && (
+                <a
+                  href={projectinfo[index].gh}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {/* {projectinfo[index].gh} */}
+                  <FiGithub /> <u>See GitHub Repo</u>
+                </a>
+              )}
+            </div>
+          )}
+
         <div className="card-back-infos-tech">
           <h3>Technologies</h3>
           <ul>

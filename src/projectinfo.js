@@ -69,7 +69,7 @@ export const projectinfo = [
     src: blockchain,
     slider: [ac1],
     link: "link",
-    gh: "link",
+    gh: "https://github.com/brunokalthoff/artcoin-blockchain.git",
     h: "ArtCoin",
     pShort: "Blockchain generating algorithmic artworks",
     pLong: "This blockchain running a cryptocurrency also hosts several algorithms for making generative artworks. Each newly mined block feeds an algorithm, chosen by the miner, with its token transaction data and makes a unique artwork from it. The works are auto uploaded into an open constantly growing digital exhibition, and they are also pushed to twitter",
