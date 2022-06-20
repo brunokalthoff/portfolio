@@ -22,7 +22,7 @@ export default function Bio({ scrollYProgress }) {
 
       <motion.p initial={{ opacity: 0 }} animate={{ opacity: 0.7 }}>
         Hey visitor! I'm a passionate Full Stack Web Developer from Hamburg,
-        Germany. I actively program with the MERN-Stack: Vanilla ES6/React.js as
+        Germany. I actively program with the MERN-Stack: React.js as
         frontend technology, and Node/Express/MongoDB for the backend.
         <br />
         <br />
