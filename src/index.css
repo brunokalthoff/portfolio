@@ -13,6 +13,7 @@
   --white: #f0f0f7;
 
   --grey: grey;
+  --sl: #5e4226;
   --black: #1d1d1d;
   --yellow: #c5832dc4;
   --fill: #545265;
@@ -84,10 +85,32 @@ svg {
   position: relative;
   min-height: 100vh;
   background: linear-gradient(to top, #111d25, rgb(15, 20, 24));
+  background-repeat: repeat;
+  background-attachment: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+}
+
+.app-bg-trees{
+  background-image: url('/src/images/treessvg.svg');
+}
+
+.app-bg-coder{
+  background-image: url('/src/images/codersvg.svg');
+}
+
+.app-bg-space{
+  background-image: url('/src/images/spacesvg.svg');
+}
+
+.app-bg-coffee{
+  background-image: url('/src/images/coffeesvg.svg');
+}
+
+.app-bg-tribal{
+  background-image: url('/src/images/tribalsvg.svg');
 }
 
 .glass {
@@ -356,16 +379,19 @@ textarea:focus {
   margin-right: 0.2rem;
 }
 
-.headline-buttons-left svg:nth-child(1) {
+.headline-buttons-left svg:hover {
+  filter: brightness(1.1);
+}
+
+/* .headline-buttons-left svg:nth-child(1) {
   color: lightblue;
-  cursor: pointer;
 }
 .headline-buttons-left svg:nth-child(2) {
   color: var(--lightBlue);
 }
 .headline-buttons-left svg:nth-child(3) {
   color: var(--lightBlue);
-}
+} */
 
 .headline svg {
   font-size: 1.2rem;
@@ -824,7 +850,7 @@ fill: #c5832d;
   align-items: center;
   cursor: pointer;
 }
-
+/* 
 .bg2 {
   position: absolute;
   max-width: 100%;
@@ -858,7 +884,7 @@ fill: #c5832d;
 .bg-open-button svg:hover path {
   fill: var(--successGreen);
   transition: all 0.5;
-}
+} */
 
 #inner path {
   fill: var(--palleteBlue);

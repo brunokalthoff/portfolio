@@ -2,11 +2,15 @@ import { motion } from "framer-motion";
 import { AiFillGithub } from "react-icons/ai";
 import { FaInstagram, FaLinkedin } from "react-icons/fa";
 // import { ImPacman, ImBubbles, ImRocket, ImStack } from 'react-icons/im';
-import { AiFillCloseCircle } from "react-icons/ai";
-import { FaCircle } from "react-icons/fa";
+import { AiFillCloseCircle, AiFillQuestionCircle, AiFillExclamationCircle } from "react-icons/ai";
+import { FaCircle, FaTree, FaCoffee } from "react-icons/fa";
+import { BsFillPatchQuestionFill, BsCodeSlash } from "react-icons/bs";
+import { RiAliensFill } from "react-icons/ri";
+import { GiDualityMask } from "react-icons/gi";
+import { BiReset } from "react-icons/bi";
 
 
-function Headline({ nav, setNav, setGlass }) {
+function Headline({ nav, setNav, setGlass, bg, setAppBg }) {
     const openInNewTab = url => {
         window.open(url, '_blank').focus();
     }
@@ -16,8 +20,13 @@ function Headline({ nav, setNav, setGlass }) {
             <div className="headline-line">
                 <div className="headline-buttons-left">
                     <AiFillCloseCircle size={13} onClick={() => setGlass(false)} />
-                    <FaCircle size={11} />
-                    <FaCircle size={11} />
+                    <span style={{display: 'inline-block', width: 3}}></span>
+                    <BiReset color="white" onClick={()=>setAppBg(null)} size={13} />
+                    <FaTree color="#4b8f75" onClick={()=>setAppBg(bg.trees)} size={13} />
+                    <BsCodeSlash color="#3ca4ff" onClick={()=>setAppBg(bg.coder)} size={13} />
+                    <RiAliensFill color="#b4557e" onClick={()=>setAppBg(bg.space)} size={13} />
+                    <FaCoffee color="#C4A484" onClick={()=>setAppBg(bg.coffee)} size={13} />
+                    <GiDualityMask color="beige" onClick={()=>setAppBg(bg.tribal)} size={12} />
                 </div>
                 <div className="crunchrocket">Portfolio</div>
 

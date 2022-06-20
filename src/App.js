@@ -11,16 +11,29 @@ function App() {
     const [nav, setNav] = useState("Bio");
     const [back, setBack] = useState(null);
     const [glass, setGlass] = useState(false);
+    const [appBg, setAppBg] = useState(null);
     useEffect(() => {
         if (glass) document.querySelector(".glassActive").scrollTop = 0;
     }, [back, nav, glass]);
 
+    useEffect(() => {
+        setAppBg(null);
+    }, [glass]);
+
+    const bg = {
+        trees: 'app-bg-trees',
+        coder: 'app-bg-coder',
+        space: 'app-bg-space',
+        coffee: 'app-bg-coffee',
+        tribal: 'app-bg-tribal'
+    }
+
     return (
-        <div className="app">
+        <div className={glass ? `app ${appBg}` : "app"}>
 
             {glass && <motion.section layout initial={{ opacity: 0, y: "50%" }} animate={{ opacity: 1, y: 0 }} transition={{ type: "spring" }} className="glass">
                 <div className="glassActive">
-                    <Headline setGlass={setGlass} nav={nav} setNav={setNav} />
+                    <Headline setGlass={setGlass} nav={nav} setNav={setNav} bg={bg} setAppBg={setAppBg} />
                     {nav === "Bio" && <Bio />}
                     {nav === "Projects" && <Projects back={back} setBack={setBack} />}
                     {nav === "Technology" && <Technology />}
