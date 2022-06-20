@@ -717,11 +717,18 @@ fill: #c5832d;
 
   .headline {
     background-color: black;
-    /* background-color: black; */
   }
 
   .headline-line {
     height: 4rem;
+  }
+
+  .headline-buttons-left svg {
+    display: none;
+  }
+
+  .headline-buttons-left svg:first-child {
+    display: inline-block;
   }
 
   nav {
@@ -733,7 +740,6 @@ fill: #c5832d;
     width: 100%;
     min-height: 100%;
     display: flex;
-    /* justify-content: center; */
     align-items: center;
     z-index: 1;
     transition: all 0.4;
@@ -850,41 +856,6 @@ fill: #c5832d;
   align-items: center;
   cursor: pointer;
 }
-/* 
-.bg2 {
-  position: absolute;
-  max-width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
-
-.bg2 div {
-  width: 20%;
-  height: 33%;
-}
-
-.bg2 div svg {
-  display: block;
-  width: 100%;
-  height: 100%;
-  padding: 2rem;
-  fill: white;
-}
-
-.bg-open-button {
-  cursor: pointer;
-}
-
-.bg-open-button svg path {
-  fill: #aa71d6;
-}
-
-.bg-open-button svg:hover path {
-  fill: var(--successGreen);
-  transition: all 0.5;
-} */
 
 #inner path {
   fill: var(--palleteBlue);
