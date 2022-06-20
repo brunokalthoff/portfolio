@@ -21,9 +21,9 @@ export default function Bio({ scrollYProgress }) {
       </motion.h5>
 
       <motion.p initial={{ opacity: 0 }} animate={{ opacity: 0.7 }}>
-        Hey visitor! I'm a passionate Full Stack Web Developer from Hamburg, Germany. I actively program with the MERN-Stack: Vanilla
-        JavaScript/React as frontend technologies, and
-        Node/Express/MongoDB for the backend.
+        Hey visitor! I'm a passionate Full Stack Web Developer from Hamburg,
+        Germany. I actively program with the MERN-Stack: Vanilla ES6/React.js as
+        frontend technology, and Node/Express/MongoDB for the backend.
         <br />
         <br />
         {!readMore && (
@@ -39,19 +39,20 @@ export default function Bio({ scrollYProgress }) {
             <motion.span>
               {" "}
               My programming journey began with designing and coding a virtual
-              art exhibition featuring 19 international artists and friends in February
-              2021, and a fascination about the possibilities that the
-              world of programming offers. Besides further exploring art in the digital
-              realm, I am interested in creating efficient and individual
-              CRM-Systems for enterprises - unleashing the full potential of
-              modern web app programming technologies that make handling
-              dynamic, fast-changing content possible. <br />
+              art exhibition featuring 19 international artists in February
+              2021, and a fascination about the possibilities that the world of
+              coding offers. Besides further exploring art in the digital realm,
+              I am interested in creating individual CRM and ERP-Systems for
+              enterprises. I aim to enable them to work more efficiently, by
+              understanding their needs precisely, and unleashing the power of
+              modern web software programming technologies. <br />
               <br />I studied analytical Philosophy & Economics at Humboldt
-              University in Berlin, and have worked in Journalism and Design. My
-              interests are in the fields of Technology, Neuroscience,
-              Philosophy of Mind, Psychology, Art, Literature. At this stage, I
-              am fully engaged in the journey and excited for the future.
-              <br />📍 Currently living in Bali.
+              University in Berlin, and have worked in Journalism and Design. My broader
+              interests include the fields of Technology, Neuroscience,
+              Philosophy of Mind, Psychology, Art, Literature.<br />At my current
+              stage, I'm fully engaged in the programming journey and excited for
+              the future.
+              <br />
             </motion.span>
             <br />
             <motion.span

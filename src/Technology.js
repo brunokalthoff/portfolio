@@ -22,8 +22,9 @@ export default function Technology() {
       "Cryptography",
       "Hashing Algorithms",
       "OAuth 2.0",
+      "Git & GitHub"
     ],
-    addons: ["Photoshop", "Illustrator", "Figma", "Inkskape"],
+    addons: ["Photoshop", "Illustrator", "Figma", "Inkscape", "Mockups & Wireframing"],
   };
 
   return (
@@ -97,7 +98,6 @@ export default function Technology() {
                 animate={{ opacity: 1, x: 5, transition: { delay: i * 0.05 } }}
                 key={i}
               >
-                {" "}
                 {addon}
               </motion.p>
             );

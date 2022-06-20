@@ -371,9 +371,9 @@ textarea:focus {
   font-size: 1.2rem;
 }
 
-#inside path {
+/* #inside path {
 fill: #c5832d;
-}
+} */
 
 .social-icons svg {
   color: lightblue;
