@@ -228,7 +228,7 @@ nav div span {
   width: 60%;
   line-height: 1.4rem;
   font-size: 0.9rem;
-  line-height: 1.8rem;
+  line-height: 2rem;
   opacity: 1;
   font-weight: 200;
 }
@@ -748,6 +748,7 @@ fill: #c5832d;
     z-index: 10000;
     color: var(--grey);
     padding-left: 0.3rem;
+ 
   }
 
   nav div span {
