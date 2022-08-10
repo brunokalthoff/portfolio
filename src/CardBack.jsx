@@ -49,13 +49,13 @@ export default function CardBack({ back, setBack }) {
 
         <div className="card-back-infos-tech">
           <h3>Technologies</h3>
-          <h4>Code</h4>
+          <h4>👨‍💻 Code</h4>
           <ul>
             {projectinfo[index].code.map((x) => (
               <p>{x}</p>
             ))}
           </ul>
-          <h4>Design</h4>
+          <h4>‍🎨 Design</h4>
           <ul>
             {projectinfo[index].design.map((x) => (
               <p>{x}</p>

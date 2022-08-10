@@ -1,6 +1,7 @@
 import ufo from "./images/ufo.png";
 import paintbrush from "./images/paintbrush.jpg";
 import kw from "./images/kw.jpg";
+import vl from "./images/vl.jpg";
 import blockchain from "./images/blockchain.jpg";
 import basic from "./images/basic.jpg";
 import vp from "./images/vp.png";
@@ -29,6 +30,9 @@ import bb1 from "./images/slider/bb1.jpg";
 import bb2 from "./images/slider/bb2.jpg";
 import vp1 from "./images/slider/vp1.jpg";
 import vp2 from "./images/slider/vp2.jpg";
+import vl1 from "./images/slider/vl1.jpg";
+import vl2 from "./images/slider/vl2.jpg";
+import vl3 from "./images/slider/vl3.jpg";
 
 export const projectinfo = [
   {
@@ -43,37 +47,26 @@ export const projectinfo = [
     design: ["Photoshop", "MS Paint ;)"],
   },
   {
-    src: paintbrush,
-    slider: [ca1, ca2, ca3, ca4, ca5],
-    link: "https://feedbackpostcards.netlify.app/",
-    gh: "https://github.com/brunokalthoff/JS-Art-RootBrush",
-    h: "RootBrush",
-    pShort: "Creative digital drawing app",
-    pLong: <>This web app lets you make digital artworks with a somewhat funky styled paintbrush. On strokes, the brush draws by animating root growth, randomizing the direction, length and curvature of each root. You can adjust the density, curvature, length, and color of the roots, and the canvas' background color. Check it out and get creative!<br /><br />At this stage, the app is written as a tool to leave feedback to a website - likely it will be integrated into the next ETG-series of online exhibitions. Another idea is to integrate it into an upcoming app called 'Letter to Self' that enables you to write a postcard to yourself and receive it by post at any chosen time in the future.<br /><br />For showcasing, I have attached it to the (now officially offline) ETG#1. It allows you to use the animated brush to draw on a square canvas. You may then hit save, add some text and upload your card to a public dashboard where it's viewed by the other visitors.</>,
-    code: ["Vanilla CSS", "Vanilla JavaScript", "Express.js", "MongoDB"],
-    design: ["-"],
-  },
-  {
-    src: kw,
-    slider: [kw1, kw2, kw3, kw4, kw5],
-    link: "https://kellerwilliams.netlify.app",
-    gh: "https://github.com/brunokalthoff/kellerwilliams",
-    h: "Keller Williams",
-    pShort: "Real estate consultancy franchise website",
-    pLong: "The leading Canadian Real Estate Consultancy Keller Williams has opened a new franchise: The Milton Market Center. Here's their website.",
-    code: ["Vanilla CSS", "React.js", "Framer Motion"],
-    design: ["Design by Keller Williams"],
-  },
-  {
     src: dinos,
     slider: [etm1, etm2, etm3],
     link: "link",
     gh: "link",
     h: "ETG#2: Remember the Mesozoics?",
     pShort: "Virtual art exhibition",
-    pLong: "Second exhibition of the ETG series. Going online in July 2022",
+    pLong: "The second exhibition within the regular ETG series. Going online in September 2022!",
     code: ["Tailwind CSS", "Framer Motion", "React.js", "Express.js", "MongoDB", "Authorization", "Authentication ", "Encryption & Hashing"],
     design: ["Figma", "Inkscape"],
+  },
+  {
+    src: paintbrush,
+    slider: [ca1, ca2, ca3, ca4, ca5],
+    link: "https://feedbackpostcards.netlify.app/",
+    gh: "https://github.com/brunokalthoff/JS-Art-RootBrush",
+    h: "RudeBrush",
+    pShort: "Creative digital drawing app",
+    pLong: <>This web app lets you create digital artworks with a somewhat funky styled paintbrush. On strokes, the brush draws by animating root growth, randomizing the direction, length and curvature of each root. You may adjust the density, curvature, length, and color of the roots, as well as the canvas' background color. Check it out and get creative!<br /><br />At this stage, the app is written as a tool to leave feedback to a website - likely it will be integrated into the next ETG-series of online exhibitions. Another idea is to integrate it into an upcoming app called 'Letter to Self' that enables you to write a postcard to yourself and receive it by post at any chosen time in the future.<br /><br />For showcasing, I have attached it to the (now officially offline) ETG#1. It allows you to use the animated brush to draw on a square canvas. You may then hit save, add some text and upload your card to a public dashboard where it's viewed by the other visitors.</>,
+    code: ["Vanilla CSS", "Vanilla JavaScript", "Express.js", "MongoDB"],
+    design: ["-"],
   },
   {
     src: blockchain,
@@ -82,9 +75,31 @@ export const projectinfo = [
     gh: "https://github.com/brunokalthoff/artcoin-blockchain.git",
     h: "ArtCoin",
     pShort: "Blockchain generating algorithmic artworks",
-    pLong: "This blockchain running a cryptocurrency also hosts several algorithms for making generative artworks. Each newly mined block feeds an algorithm, chosen by the miner, with its token transaction data and makes a unique artwork from it. The works are auto uploaded into an open constantly growing digital exhibition, and they are also pushed to twitter",
+    pLong: "This blockchain running a coin also hosts several algorithms for making generative artworks. Each newly mined block feeds an algorithm that was chosen by the miner with transaction data and from it creates a unique artwork. They are then added to an open, constantly growing digital exhibition, and pushed to twitter",
     code: ["Vanilla JS", "React.js", "Tailwind CSS", "Express in Node.js", "Firebase", "Authorization", "Authentication ", "Cryptography"],
     design: ["-"],
+  },
+  {
+    src: vl,
+    slider: [vl1, vl2, vl3],
+    link: "https://vlahomelistings.netlify.app",
+    gh: "https://github.com/brunokalthoff/vlchomelistings",
+    h: "Van Leeuwen",
+    pShort: "Website design & development for canadian real estate advisory",
+    pLong: "I structured, designed and built the new website for the canadian company Van Leeuwen Real Estate Advisors",
+    code: ["Vanilla CSS", "Next.js", "SSR", "Framer Motion"],
+    design: ["Figma, Inkscape"],
+  },
+  {
+    src: kw,
+    slider: [kw1, kw2, kw3, kw4, kw5],
+    link: "https://kellerwilliams.netlify.app",
+    gh: "https://github.com/brunokalthoff/kellerwilliams",
+    h: "Keller Williams",
+    pShort: "Website development for canadian consultancy franchise",
+    pLong: "The leading Canadian Real Estate Consultancy Keller Williams has opened a new franchise: The Milton Market Center. Here's their website.",
+    code: ["Vanilla CSS", "React.js", "Framer Motion"],
+    design: ["Design by Keller Williams"],
   },
   {
     src: basic,
@@ -92,8 +107,8 @@ export const projectinfo = [
     link: "https://basic-berlin.de/",
     gh: "link",
     h: "basic Berlin",
-    pShort: "Interior design stores Website",
-    pLong: "basic run two very successful trendy interior design stores in the heart of Berlin's Prenzlauer Berg. Online they showcase some of their favorite furniture collections and describe their services through my design and copywriting.",
+    pShort: "Website design & copywriting for german interior design company",
+    pLong: "basic runs two very successful, trendy interior design stores in the heart of Berlin's Prenzlauer Berg. Online, they showcase some of their favorite furniture collections and describe their services through my design and copywriting.",
     code: ["-"],
     design: ["Figma", "Illustrator"],
   },
@@ -103,8 +118,8 @@ export const projectinfo = [
     link: "https://vertriebspuls.de/",
     gh: "link",
     h: "Vertriebspuls",
-    pShort: "Sales consultancy Website",
-    pLong: "Diego Machemer is a German sales consultant. For his website, I help him show off his consultancy by providing consistent design patterns and copywriting.",
+    pShort: "Website design & copywriting for german sales consultant",
+    pLong: "Diego Machemer is a German sales consultant. For his website, I help him show off his consultancy by creating consistent design patterns and copywriting.",
     code: ["-"],
     design: ["Photoshop", "Illustrator"]
   },

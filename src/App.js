@@ -33,7 +33,7 @@ function App() {
 
             {glass && <motion.section layout initial={{ opacity: 0, y: "50%" }} animate={{ opacity: 1, y: 0 }} transition={{ type: "spring" }} className="glass">
                 <div className="glassActive">
-                    <Headline setGlass={setGlass} nav={nav} setNav={setNav} bg={bg} setAppBg={setAppBg} />
+                    <Headline setGlass={setGlass} nav={nav} setNav={setNav} bg={bg} appBg={appBg} setAppBg={setAppBg} />
                     {nav === "Bio" && <Bio />}
                     {nav === "Projects" && <Projects back={back} setBack={setBack} />}
                     {nav === "Technology" && <Technology />}
