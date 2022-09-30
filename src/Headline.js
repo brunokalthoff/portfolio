@@ -36,10 +36,10 @@ function Headline({ nav, setNav, setGlass, bg, setAppBg }) {
                 </div>
             </div>
             <nav>
-                <motion.div className={nav === "Bio" ? "nav-tab-active" : "nav-tab-inactive"} onClick={() => setNav("Bio")}><span style={{ fontSize: '1rem' }}>😋</span><motion.span>Bio</motion.span></motion.div>
-                <motion.div className={nav === "Projects" ? "nav-tab-active" : "nav-tab-inactive"} onClick={() => setNav("Projects")}><span style={{ fontSize: '1rem' }}>✨</span><span>Projects</span> </motion.div>
-                <motion.div className={nav === "Technology" ? "nav-tab-active" : "nav-tab-inactive"} onClick={() => setNav("Technology")}><span style={{ fontSize: '1rem' }}>🚀</span> <span>Stack</span> </motion.div>
-                <motion.div className={nav === "Contact" ? "nav-tab-active" : "nav-tab-inactive"} onClick={() => setNav("Contact")} ><span style={{ fontSize: '1rem' }}>👋</span><span>Contact</span></motion.div>
+                <motion.div className={nav === "Bio" ? "nav-tab-active" : "nav-tab-inactive"} onClick={() => setNav("Bio")}><span style={{ fontSize: '1.2rem' }}>😌</span><motion.span>Bio</motion.span></motion.div>
+                <motion.div className={nav === "Projects" ? "nav-tab-active" : "nav-tab-inactive"} onClick={() => setNav("Projects")}><span style={{ fontSize: '1.2rem' }}>✨</span><span>Projects</span> </motion.div>
+                <motion.div className={nav === "Technology" ? "nav-tab-active" : "nav-tab-inactive"} onClick={() => setNav("Technology")}><span style={{ fontSize: '1.2rem' }}>🚀</span> <span>Stack</span> </motion.div>
+                <motion.div className={nav === "Contact" ? "nav-tab-active" : "nav-tab-inactive"} onClick={() => setNav("Contact")} ><span style={{ fontSize: '1.2rem' }}>👋</span><span>Contact</span></motion.div>
             </nav>
         </motion.div>
     );

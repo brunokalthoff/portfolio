@@ -5,18 +5,18 @@ import { frontendSvg, backendSvg, skillsSvg, designSvg } from "./svgs";
 export default function Technology() {
   const tech = {
     frontend: [
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Next",
+      "REDUX",
       "HTML",
       "CSS",
       "SASS",
       "Tailwind",
       "Framer Motion",
-      "GSAP",
-      "JavaScript",
-      "React.js",
-      "Next.js",
-      "REDUX",
     ],
-    backend: ["Node.js", "Express.js", "MongoDB", "Firebase"],
+    backend: ["Node", "Express", "MongoDB", "Firebase"],
     skills: [
       "AWS",
       "User Authentication",
@@ -26,7 +26,7 @@ export default function Technology() {
       "OAuth 2.0",
       "Git & GitHub"
     ],
-    addons: ["Photoshop", "Illustrator", "Figma", "Inkscape", "Mockups & Wireframing"],
+    addons: ["Figma", "Photoshop", "Illustrator"],
   };
 
   return (

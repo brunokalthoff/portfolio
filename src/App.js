@@ -17,7 +17,7 @@ function App() {
     }, [back, nav, glass]);
 
     useEffect(() => {
-        setAppBg(null);
+        setAppBg(bg.coder);
     }, [glass]);
 
     const bg = {

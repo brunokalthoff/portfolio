@@ -13,32 +13,21 @@ export default function Bio({ scrollYProgress }) {
         src={avatar}
         alt="avatar"
       />
-      <motion.h2 initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+      <motion.h1 initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
         Bruno Kalthoff
-      </motion.h2>
-      <motion.h4 initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+      </motion.h1>
+      <motion.h2 initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
         Web Developer
-      </motion.h4>
+      </motion.h2>
 
       <motion.p initial={{ opacity: 0 }} animate={{ opacity: 0.7 }}>
-        Hey visitor! I'm a passionate Full Stack Web Developer from Hamburg,
+        Hey visitor! I'm a passionate Full Stack Web Software Developer from Hamburg,
         Germany. I actively program with the MERN-Stack: Vanilla
         JavaScript/React/Next as frontend technologies, and Node/Express/MongoDB
         for the backend.
         <br />
         <br />
-        {!readMore && (
-          <motion.span
-            className="more"
-            onClick={() => setReadMore((prev) => !prev)}
-          >
-            ... <br /> <u>more</u>
-          </motion.span>
-        )}
-        {readMore && (
-          <>
-            <motion.span>
-              {" "}
+
               My programming journey began with designing and coding a virtual
               art exhibition featuring 19 international artists, and a
               fascination about the possibilities that the world of (web)
@@ -56,16 +45,9 @@ export default function Bio({ scrollYProgress }) {
               Other then the tech world, my interests include the fields of
               Psychology, Philosophy of Mind, Neuroscience, Art, Literature.
               <br />
-            </motion.span>
+         
             <br />
-            <motion.span
-              className="more"
-              onClick={() => setReadMore((prev) => !prev)}
-            >
-              <br /> <u>less</u>
-            </motion.span>
-          </>
-        )}
+        
       </motion.p>
     </motion.div>
   );
