@@ -38,7 +38,7 @@ export const projectinfo = [
   {
     src: ufo,
     slider: [etg11, etg12, etg13, etg14, etg15, etg16],
-    link: "https://enterthegateway.netlify.app/",
+    link: "https://etg1.enterthegateway.art/",
     gh: "https://github.com/brunokalthoff/etg-1",
     h: "ETG#1: Enter The Gateway",
     pShort: "Virtual art exhibition",

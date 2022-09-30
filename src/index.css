@@ -131,7 +131,8 @@ svg {
   overflow: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  background: var(--darkBlue)
+  background: var(--darkBlue);
+  background: var(--black);
 }
 
 .glassActive::-webkit-scrollbar {
@@ -239,7 +240,7 @@ nav div span {
 .contact-card {
   text-align: left;
   width: 50%;
-  padding: 2rem;
+  padding: 2rem 1rem 1rem;
 }
 
 .contact-card p {
@@ -270,7 +271,7 @@ textarea {
   width: 100%;
   height: 100%;
   border: none;
-  border-bottom: 1px solid var(--lightBlue);
+  border-bottom: 1px solid var(--white);
   transition: all 0.2s;
   color: var(--white);
 }
@@ -290,8 +291,12 @@ textarea {
   z-index: 0;
 }
 
+.contact-form h2 {
+  color: var(--lightBlue);
+}
+
 .contact-form-span-active {
-  color: var(--yellow);
+  color: var(--lightBlue);
   font-size: 0.7rem;
   top: -1rem;
   bottom: auto;
@@ -300,7 +305,7 @@ textarea {
 .contact-form input[type="text"]:focus,
 textarea:focus {
   outline: none;
-  border-bottom: 1px solid var(--yellow);
+  border-bottom: 1px solid var(--lightBlue);
 }
 
 .contact-form input[type="submit"] {
@@ -316,7 +321,7 @@ textarea:focus {
 }
 
 .contact-form input[type="submit"]:hover {
-  filter: brightness(0.9);
+  filter: hue-rotate(-0.2turn);
 }
 
 .contact-form input[type="submit"]:active {
@@ -337,7 +342,7 @@ textarea:focus {
   width: 100%;
   top: 0;
   background-color: rgb(15, 20, 24);
-  z-index: 10;
+  z-index: 100;
   color: var(--white);
   font-size: 0.8rem;
 }
@@ -445,7 +450,7 @@ textarea:focus {
   border-radius: 1rem;
   width: 80%;
   max-width: 700px;
-  background-color: var(--darkestBlue);
+  background-color: rgba(15, 21, 24, 0.667);
   cursor: pointer;
   display: flex;
   gap: 2rem;
@@ -453,7 +458,7 @@ textarea:focus {
   text-align: left;
   margin: 0 auto 3rem;
   padding: 2rem;
-  border: 1px solid rgba(255, 255, 255, 0.331);
+  border: 1px solid rgba(255, 255, 255, 0.133);
 }
 
 .project:hover {
@@ -466,7 +471,6 @@ textarea:focus {
   object-fit: cover;
   border-radius: 1rem;
   filter: saturate(-1);
-    border: 1px solid var(--borderBlue);
 
 }
 
@@ -503,7 +507,6 @@ textarea:focus {
   flex-wrap: wrap;
   align-items: stretch;
   justify-content: space-evenly;
-  background: var(--middleDarkerBlue);
   background: var(--black);
   padding: 2rem 1rem;
 }
@@ -545,17 +548,39 @@ textarea:focus {
 .card-back-infos a {
   display: block;
   padding: 1rem;
-  color: lightblue;
+  color: var(--white);
   cursor: pointer;
   word-break: break-all;
   text-decoration: none;
   border: solid;
   border-radius: 0.5rem;
+  margin-top: 1rem;
+}
+
+.card-back-infos a:hover {
+  filter: brightness(1.2);
+  background-color: rgba(255, 255, 255, 0.187);
 }
 
 .card-back-infos svg {
   font-size: 1.5rem;
 }
+
+.card-back-infos-tech {
+  background-color: rgb(24, 28, 35);
+  border: solid rgba(255, 255, 255, 0.162);
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.card-back-infos-tech h3 {
+  color: white;
+}
+
+.card-back-infos-tech ul {
+  margin-bottom: 2rem;
+}
+
 
 .technology {
   width: 100%;
@@ -581,7 +606,8 @@ textarea:focus {
   justify-content: space-evenly;
 }
 
-.technology > div h3 {
+.technology > div h2 {
+  color: var(--lightBlue);
   padding: 2rem 0 1rem;
 }
 
@@ -699,57 +725,49 @@ textarea:focus {
   .contact-form {
     width: 100%;
   }
+
+  .arrow {
+    margin-top: .5rem;
+  }
+
+  .card-back {
+    gap: 2rem;
+  }
+
+  .card-back-description {
+    margin-top: 2rem;
+    width: 100%;
+  }
+
+  .card-back-infos {
+    width: 100%;
+    align-items: center;
+    position: relative;
+  }
+
+  .card-back-infos-imgslider {
+    width: 100%;
+  }
+
+  .card-back-infos-tech {
+    width: 100%;
+  }
 }
 
-.card-back-infos-imgslider {
-  height: 10rem;
-  width: 20rem;
-  position: relative;
-  background: #111111;
-  overflow: hidden;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 0.5rem;
-  object-fit: cover;
-  border: 1px solid rgba(173, 216, 230, 0.584);
-}
-
-.next,
-.prev {
-  top: calc(50% - 20px);
-  position: absolute;
-  background: var(--black);
-  border-radius: 30px;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  user-select: none;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 18px;
-  z-index: 2;
-}
-
-.next {
-  right: 10px;
-}
-
-.prev {
-  left: 10px;
-  transform: scale(-1);
-}
-
-.card-back-infos-imgslider img {
-  position: absolute;
-  height: auto;
+.slide-container {
   width: 100%;
-  object-fit: cover;
-  border-radius: 0.5rem;
+  height: 240px;
+  background: inherit;
+  border-radius: 5px;
+overflow: hidden;
+}
+
+.slider-image {
+min-width: 100%;
+  height: 240px;
+  background-position: center center;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
 }
 
 .refresh {

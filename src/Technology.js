@@ -33,7 +33,7 @@ export default function Technology() {
     <div className="technology">
       <div className="frontend">
         <div>
-          <h3>Frontend</h3>
+          <h2>Frontend</h2>
           {tech.frontend.map((frontend, i) => {
             return (
               <motion.p
@@ -54,7 +54,7 @@ export default function Technology() {
       <div className="backend">
         {backendSvg}
         <div>
-          <h3>Backend</h3>
+          <h2>Backend</h2>
           {tech.backend.map((backend, i) => {
             return (
               <motion.p
@@ -71,7 +71,7 @@ export default function Technology() {
       </div>
       <div className="skills">
         <div>
-          <h3>Skills</h3>
+          <h2>Skills</h2>
           {tech.skills.map((skill, i) => {
             return (
               <motion.p
@@ -91,7 +91,7 @@ export default function Technology() {
       <div className="design">
         {designSvg}
         <div>
-          <h3>Design</h3>
+          <h2>Design</h2>
           {tech.addons.map((addon, i) => {
             return (
               <motion.p
